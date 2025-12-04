@@ -1,0 +1,29 @@
+{
+  "version": "1",
+  "env": {
+    "compilerVersion": "4.76"
+  },
+  "files": {
+    "interface.uts": {
+      "md5": "0befee70b33e635b0cc7d49e2086de70"
+    },
+    "unierror.uts": {
+      "md5": "ef672b9f383dbd14a740b623f49a468f"
+    },
+    "utssdk/app-android/index.uts": {
+      "md5": "04b21538e1245e3676e84369050749d2"
+    },
+    "utssdk/index.uts": {
+      "md5": "42237464adad0d967f7be7a3db762562"
+    },
+    "package.json": {
+      "md5": "135e8b03586e7ddc6c41fc9a09e7bca3"
+    },
+    "utssdk/app-android/config.json": {
+      "md5": "bae50de8095f2a9afae9b5b8ec6f0e56"
+    },
+    "utssdk/app-android/libs/serialbridge-debug.aar": {
+      "md5": "b7fb828b80b815ba0ea78e498bcf78cc"
+    }
+  }
+}

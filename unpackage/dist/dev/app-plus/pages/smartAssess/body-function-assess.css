@@ -1,0 +1,127 @@
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+.container[data-v-2d7bb3d1] {
+  min-height: 100vh;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== 顶部区域 ========== */
+.header[data-v-2d7bb3d1] {
+  position: relative;
+  height: 3.5rem;
+  /* 头部要足够高，别让 70rpx 的圆顶住 */
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  /* 中间标题垂直居中 */
+  justify-content: center;
+  background-color: #F5F5F5;
+}
+.back-btn[data-v-2d7bb3d1] {
+  position: absolute;
+  left: 0.65625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.1875rem;
+  height: 2.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  /* 关键：容器背景透明，这样就能去掉灰色圆环 */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.back-btn[data-v-2d7bb3d1]:active {
+  transform: translateY(-50%) scale(0.97);
+  opacity: 0.7;
+}
+
+/* 图标：只给宽度，高度自适应；并放大约 10%（36→40rpx） */
+.back-icon[data-v-2d7bb3d1] {
+  width: 1.1875rem;
+  /* +10% */
+  height: auto;
+  /* 让图标保持自身纵横比 */
+  display: block;
+  /* 避免行内元素基线引起的视觉偏差 */
+}
+.header-title[data-v-2d7bb3d1] {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* ========== 内容区域 ========== */
+.content[data-v-2d7bb3d1] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 0.9375rem;
+}
+
+/* AI 助手标签 */
+.ai-badge[data-v-2d7bb3d1] {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  border-radius: 1.5625rem;
+  padding: 0.375rem 1rem;
+  margin-bottom: 0.625rem;
+  box-shadow: 0 0.125rem 0.375rem rgba(255, 165, 0, 0.3);
+}
+.ai-text[data-v-2d7bb3d1] {
+  font-size: 0.8125rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 0.0625rem;
+}
+
+/* 提示文字框 */
+.tip-card[data-v-2d7bb3d1] {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 0.625rem;
+  padding: 0.9375rem 0.75rem;
+  margin-bottom: 1.875rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+.tip-text[data-v-2d7bb3d1] {
+  font-size: 0.875rem;
+  color: #333333;
+  text-align: center;
+  line-height: 1.6;
+  display: block;
+}
+
+/* 设备图片 */
+.device-image-wrapper[data-v-2d7bb3d1] {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 0 0.9375rem;
+}
+.device-image[data-v-2d7bb3d1] {
+  width: 100%;
+  max-width: 15.625rem;
+  height: auto;
+}

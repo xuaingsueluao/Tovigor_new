@@ -1,0 +1,281 @@
+
+.container[data-v-97b8fabd] {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	background-color: #FFFFFF;
+	padding: 1.25rem;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+/* ==================== 数据看板 ==================== */
+.stat-board[data-v-97b8fabd] {
+	position: relative;
+	width: 100%;
+	height: 5rem;
+	margin-bottom: 1.25rem;
+	flex-shrink: 0;
+}
+.board-bg[data-v-97b8fabd] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.stat-row[data-v-97b8fabd] {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+	padding: 0 0.9375rem;
+}
+.stat-item[data-v-97b8fabd] {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.stat-icon[data-v-97b8fabd] {
+	width: 1.875rem;
+	height: 1.875rem;
+}
+.stat-content[data-v-97b8fabd] {
+	display: flex;
+	flex-direction: column;
+	gap: 0.125rem;
+}
+.stat-label[data-v-97b8fabd] {
+	font-size: 0.75rem;
+	color: #666666;
+}
+.stat-value[data-v-97b8fabd] {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #000000;
+}
+.separator[data-v-97b8fabd] {
+	width: 0.0625rem;
+	height: 2.5rem;
+}
+
+/* ==================== 中央控制区：力量旋钮 ==================== */
+.control-center[data-v-97b8fabd] {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex: 1;
+	min-height: 0;
+	margin-bottom: 0.9375rem;
+}
+.dial-wrapper[data-v-97b8fabd] {
+	position: relative;
+	width: 12.5rem;
+	height: 12.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 圆弧背景（灰色底） */
+.dial-arc[data-v-97b8fabd] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+.dial-arc-bg[data-v-97b8fabd] {
+	opacity: 0.3;
+	transition: opacity 0.3s;
+}
+.dial-arc--off[data-v-97b8fabd] {
+	opacity: 0.2;
+	filter: grayscale(100%);
+}
+
+/* 圆弧进度容器（用于裁剪进度） */
+.dial-arc-progress-wrapper[data-v-97b8fabd] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	overflow: hidden;
+	/* 使用CSS变量接收角度值 */
+	--progress-angle: 0deg;
+}
+
+/* 圆弧进度（彩色高亮） */
+.dial-arc-active[data-v-97b8fabd] {
+	opacity: 1;
+	filter: drop-shadow(0 0 0.3125rem rgba(76, 175, 80, 0.6));
+	/* 通过遮罩实现进度效果 */
+	mask-image: conic-gradient(
+		from -120deg at 50% 50%,
+		#000 0deg,
+		#000 var(--progress-angle),
+		#0000 var(--progress-angle)
+	);
+	-webkit-mask-image: conic-gradient(
+		from -120deg at 50% 50%,
+		#000 0deg,
+		#000 var(--progress-angle),
+		#0000 var(--progress-angle)
+	);
+}
+
+/* 装饰图片 */
+.dial-decoration[data-v-97b8fabd] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+/* 圆形中心区域 */
+.dial-circle[data-v-97b8fabd] {
+	position: relative;
+	width: 7.5rem;
+	height: 7.5rem;
+	border-radius: 50%;
+	background: rgba(200, 200, 200, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+	transition: all 0.3s;
+}
+.dial-circle--on[data-v-97b8fabd] {
+	background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(139, 195, 74, 0.3));
+	box-shadow: 0 0.25rem 0.9375rem rgba(76, 175, 80, 0.4);
+}
+
+/* 力量值显示 */
+.dial-value[data-v-97b8fabd] {
+	font-size: 1.75rem;
+	font-weight: bold;
+	color: #333333;
+	line-height: 1;
+}
+.dial-unit[data-v-97b8fabd] {
+	font-size: 0.75rem;
+	color: #666666;
+	margin-top: 0.125rem;
+}
+
+/* 中心开关按钮 */
+.dial-power-btn[data-v-97b8fabd] {
+	position: absolute;
+	bottom: -0.625rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.15);
+	transition: all 0.3s;
+}
+.dial-power-btn[data-v-97b8fabd]:active {
+	transform: scale(0.95);
+}
+.power-icon[data-v-97b8fabd] {
+	width: 1.5625rem;
+	height: 1.5625rem;
+}
+
+/* ==================== 底部模式选择区 ==================== */
+.bottom-panel[data-v-97b8fabd] {
+	flex-shrink: 0;
+	transition: opacity 0.3s;
+}
+.bottom-panel--off[data-v-97b8fabd] {
+	opacity: 0.4;
+	pointer-events: none;
+}
+.mode-title[data-v-97b8fabd] {
+	font-size: 0.875rem;
+	color: #333333;
+	font-weight: bold;
+	margin-bottom: 0.625rem;
+}
+.mode-grid[data-v-97b8fabd] {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.3125rem;
+	margin-bottom: 0.9375rem;
+}
+.mode-item[data-v-97b8fabd] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.3125rem;
+	border-radius: 0.375rem;
+	background: rgba(255, 255, 255, 0.3);
+	transition: all 0.3s;
+	flex: 1;
+}
+.mode-item.selected[data-v-97b8fabd] {
+	background: rgba(76, 175, 80, 0.3);
+	transform: scale(1.05);
+}
+.mode-item.disabled[data-v-97b8fabd] {
+	opacity: 0.3;
+	pointer-events: none;
+}
+.mode-icon[data-v-97b8fabd] {
+	width: 1.875rem;
+	height: 1.875rem;
+	transition: all 0.3s;
+}
+.mode-item.selected .mode-icon[data-v-97b8fabd] {
+	filter: drop-shadow(0 0.0625rem 0.25rem rgba(76, 175, 80, 0.5));
+}
+.mode-name[data-v-97b8fabd] {
+	font-size: 0.625rem;
+	color: #666666;
+	transition: all 0.3s;
+}
+.mode-item.selected .mode-name[data-v-97b8fabd] {
+	color: #000000;
+	font-weight: bold;
+}
+.mode-confirm-btn[data-v-97b8fabd] {
+	width: 100%;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #CCCCCC;
+	border-radius: 1.5625rem;
+	transition: all 0.3s;
+}
+.mode-confirm-btn.active[data-v-97b8fabd] {
+	background: linear-gradient(135deg, #4CAF50, #8BC34A);
+	box-shadow: 0 0.25rem 0.625rem rgba(76, 175, 80, 0.4);
+}
+.btn-text[data-v-97b8fabd] {
+	font-size: 0.875rem;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+/* ==================== 安全须知弹窗 ==================== */
+.safety-content[data-v-97b8fabd] {
+	padding: 0 0.3125rem;
+}
+.safety-item[data-v-97b8fabd] {
+	font-size: 0.875rem;
+	color: #333333;
+	line-height: 2;
+	margin-bottom: 0.3125rem;
+	text-align: left;
+}

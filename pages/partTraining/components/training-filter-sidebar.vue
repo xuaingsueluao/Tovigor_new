@@ -1,0 +1,493 @@
+<!--
+ * 训练筛选侧边栏组件
+ * 功能：左侧垂直筛选栏，包含 AI 推荐头像和多个筛选项
+ * 使用场景：部位训练页面的私有组件
+ -->
+<template>
+	<view class="sidebar">
+		<!-- 顶部 AI 推荐头像块 -->
+		<view class="ai-header">
+			<view class="ai-recommend-btn" @click="goToAIRecommend">
+				<image
+					class="ai-avatar"
+					src="/static/icons/partTrainingActivity/AI_coach_Vince.png"
+					mode="aspectFit"
+				/>
+				<text class="ai-text">AI推荐</text>
+			</view>
+		</view>
+
+		<!-- 筛选项列表 -->
+		<scroll-view
+			class="filter-scroll"
+			scroll-y
+			:show-scrollbar="false"
+		>
+			<view class="filter-list">
+
+				<!-- 筛选 - 不可点击的标题 -->
+				<view class="filter-title">
+					<text class="filter-title-text">筛选</text>
+				</view>
+
+				<!-- 性别 -->
+				<filter-pill
+					label="性别"
+					:active="expanded.gender"
+					:showArrow="true"
+					@click="toggleSection('gender')"
+				/>
+				<view v-if="expanded.gender" class="filter-options">
+					<view
+						v-for="option in genderOptions"
+						:key="option.value"
+						class="option-chip"
+						:class="{ 'option-chip--active': isOptionActive('gender', option.value) }"
+						@click="onOptionClick('gender', option)"
+					>
+						<text class="option-text">{{ option.label }}</text>
+					</view>
+				</view>
+
+				<!-- 目的 -->
+				<filter-pill
+					label="目的"
+					:active="expanded.goal"
+					:showArrow="true"
+					@click="toggleSection('goal')"
+				/>
+				<view v-if="expanded.goal" class="filter-options">
+					<view
+						v-for="option in goalOptions"
+						:key="option.value"
+						class="option-chip"
+						:class="{ 'option-chip--active': isOptionActive('goal', option.value) }"
+						@click="onOptionClick('goal', option)"
+					>
+						<text class="option-text">{{ option.label }}</text>
+					</view>
+				</view>
+
+				<!-- 难度 -->
+				<filter-pill
+					label="难度"
+					:active="expanded.level"
+					:showArrow="true"
+					@click="toggleSection('level')"
+				/>
+				<view v-if="expanded.level" class="filter-options">
+					<view
+						v-for="option in levelOptions"
+						:key="option.value"
+						class="option-chip"
+						:class="{ 'option-chip--active': isOptionActive('level', option.value) }"
+						@click="onOptionClick('level', option)"
+					>
+						<text class="option-text">{{ option.label }}</text>
+					</view>
+				</view>
+
+				<!-- 部位 -->
+				<filter-pill
+					label="部位"
+					:active="expanded.part"
+					:showArrow="true"
+					@click="toggleSection('part')"
+				/>
+				<view v-if="expanded.part" class="filter-options">
+					<view
+						v-for="option in partOptions"
+						:key="option.value"
+						class="option-chip"
+						:class="{ 'option-chip--active': isOptionActive('part', option.value) }"
+						@click="onOptionClick('part', option)"
+					>
+						<text class="option-text">{{ option.label }}</text>
+					</view>
+				</view>
+
+				<!-- 训练方式 -->
+				<filter-pill
+					label="训练方式"
+					:active="expanded.method"
+					:showArrow="true"
+					@click="toggleSection('method')"
+				/>
+				<view v-if="expanded.method" class="filter-options">
+					<view
+						v-for="option in methodOptions"
+						:key="option.value"
+						class="option-chip"
+						:class="{ 'option-chip--active': isOptionActive('method', option.value) }"
+						@click="onOptionClick('method', option)"
+					>
+						<text class="option-text">{{ option.label }}</text>
+					</view>
+				</view>
+
+				<!-- 时长 -->
+				<filter-pill
+					label="时长"
+					:active="expanded.duration"
+					:showArrow="true"
+					@click="toggleSection('duration')"
+				/>
+				<view v-if="expanded.duration" class="filter-options">
+					<view
+						v-for="option in durationOptions"
+						:key="option.value"
+						class="option-chip"
+						:class="{ 'option-chip--active': isOptionActive('duration', option.value) }"
+						@click="onOptionClick('duration', option)"
+					>
+						<text class="option-text">{{ option.label }}</text>
+					</view>
+				</view>
+
+				<!-- 配件 -->
+				<filter-pill
+					label="配件"
+					:active="expanded.equipment"
+					:showArrow="true"
+					@click="toggleSection('equipment')"
+				/>
+				<view v-if="expanded.equipment" class="filter-options">
+					<view
+						v-for="option in equipmentOptions"
+						:key="option.value"
+						class="option-chip"
+						:class="{ 'option-chip--active': isOptionActive('equipment', option.value) }"
+						@click="onOptionClick('equipment', option)"
+					>
+						<text class="option-text">{{ option.label }}</text>
+					</view>
+				</view>
+
+				<!-- AI教练 -->
+				<filter-pill
+					label="AI教练"
+					:active="expanded.coach"
+					:showArrow="true"
+					@click="toggleSection('coach')"
+				/>
+				<view v-if="expanded.coach" class="coach-options">
+					<view
+						v-for="coach in coachOptions"
+						:key="coach.value"
+						class="coach-card"
+						:class="{ 'coach-card--active': isOptionActive('coach', coach.value) }"
+						@click="onOptionClick('coach', coach)"
+					>
+						<image class="coach-avatar" :src="coach.avatar" mode="aspectFit" />
+						<text class="coach-name">{{ coach.label }}</text>
+					</view>
+				</view>
+
+			</view>
+		</scroll-view>
+	</view>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import FilterPill from '@/components/ui-box/filter-pill.vue'
+
+// Props
+const props = defineProps({
+	// 由父组件传入当前筛选状态
+	filters: {
+		type: Object,
+		default: () => ({
+			gender: [],
+			goal: [],
+			level: [],
+			part: [],
+			method: [],
+			duration: [],
+			equipment: [],
+			coach: []
+		})
+	}
+})
+
+// Emits - 简化为只需要 changeFilter 事件
+const emits = defineEmits(['changeFilter'])
+
+// 展开状态
+const expanded = ref({
+	gender: false,
+	goal: false,
+	level: false,
+	part: false,
+	method: false,
+	duration: false,
+	equipment: false,
+	coach: false
+})
+
+// 选项数据定义
+const genderOptions = [
+	{ value: 'all', label: '全部' },
+	{ value: 'female', label: '女性' },
+	{ value: 'male', label: '男性' }
+]
+
+const goalOptions = [
+	{ value: 'fat-loss', label: '减脂塑形' },
+	{ value: 'strength', label: '力量增强' },
+	{ value: 'shaping', label: '塑形紧致' },
+	{ value: 'cardio', label: '有氧训练' },
+	{ value: 'flexibility', label: '柔韧拉伸' }
+]
+
+const levelOptions = [
+	{ value: 'beginner', label: '初级' },
+	{ value: 'intermediate', label: '中级' },
+	{ value: 'advanced', label: '高级' }
+]
+
+const partOptions = [
+	{ value: 'shoulder', label: '肩部' },
+	{ value: 'chest', label: '胸部' },
+	{ value: 'back', label: '背部' },
+	{ value: 'arm', label: '手臂' },
+	{ value: 'core', label: '核心' },
+	{ value: 'leg', label: '腿部' },
+	{ value: 'glute', label: '臀部' }
+]
+
+const methodOptions = [
+	{ value: 'resistance', label: '阻力训练' },
+	{ value: 'hiit', label: 'HIIT' },
+	{ value: 'circuit', label: '循环训练' },
+	{ value: 'bodyweight', label: '自重训练' }
+]
+
+const durationOptions = [
+	{ value: '0-15', label: '15min以内' },
+	{ value: '15-30', label: '15-30min' },
+	{ value: '30-45', label: '30-45min' },
+	{ value: '45+', label: '45min以上' }
+]
+
+const equipmentOptions = [
+	{ value: 'none', label: '无器械' },
+	{ value: 'dumbbell', label: '哑铃' },
+	{ value: 'barbell', label: '杠铃' },
+	{ value: 'kettlebell', label: '壶铃' },
+	{ value: 'resistance-band', label: '弹力带' },
+	{ value: 'trx', label: 'TRX' }
+]
+
+const coachOptions = [
+	{
+		value: 'vince',
+		label: 'Vince 艾斯',
+		avatar: '/static/icons/partTrainingActivity/AI_coach_Vince.png'
+	},
+	{
+		value: 'vera',
+		label: 'Vera 维拉',
+		avatar: '/static/icons/partTrainingActivity/AI_coach_Vera.png'
+	}
+]
+
+// 切换展开/收起
+const toggleSection = (key) => {
+	expanded.value[key] = !expanded.value[key]
+}
+
+// 选项点击
+const onOptionClick = (groupKey, option) => {
+	const currentValues = props.filters[groupKey] || []
+	let newValues = []
+	
+	if (currentValues.includes(option.value)) {
+		// 取消选中
+		newValues = currentValues.filter(v => v !== option.value)
+	} else {
+		// 添加选中
+		newValues = [...currentValues, option.value]
+	}
+	
+	emits('changeFilter', {
+		key: groupKey,
+		values: newValues,
+		option: option
+	})
+}
+
+// 判断选项是否选中
+const isOptionActive = (groupKey, optionValue) => {
+	return (props.filters[groupKey] || []).includes(optionValue)
+}
+
+// 获取当前选中的标签文本
+const getSelectedLabels = (groupKey, options) => {
+	const selected = props.filters[groupKey] || []
+	if (selected.length === 0) return ''
+	
+	const labels = options
+		.filter(opt => selected.includes(opt.value))
+		.map(opt => opt.label)
+	
+	return labels.join('、')
+}
+
+// 跳转到AI推荐页面
+const goToAIRecommend = () => {
+	uni.navigateTo({
+		url: '/pages/aiRecommend/ai-recommend'
+	})
+}
+</script>
+
+<style scoped lang="scss">
+.sidebar {
+	width: 180rpx;
+	padding: 0 12rpx 16rpx;
+	border-radius: 24rpx;
+	background-color: #F3F4F6;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ========== 顶部 AI 推荐块 ========== */
+.ai-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20rpx;
+}
+
+.ai-recommend-btn {
+	width: 100%;
+	height: 80rpx;
+	border-radius: 20rpx;
+	background: rgba(101, 177, 254, 1);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 12rpx;
+	position: relative;
+	padding: 0 12rpx;
+}
+
+.ai-avatar {
+	width: 56rpx;
+	height: 56rpx;
+	flex-shrink: 0;
+}
+
+.ai-text {
+	font-size: 22rpx;
+	font-weight: bold;
+	color: #000000;
+	letter-spacing: 1rpx;
+}
+
+/* ========== 筛选列表 ========== */
+.filter-scroll {
+	flex: 1;
+	max-height: 900rpx;
+}
+
+.filter-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12rpx;
+}
+
+/* 筛选标题 */
+.filter-title {
+	height: 68rpx;
+	padding: 0 16rpx;
+	border-radius: 16rpx;
+	background: rgba(200, 200, 200, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.filter-title-text {
+	font-size: 24rpx;
+	color: #666666;
+	font-weight: 600;
+}
+
+/* ========== 展开选项区域 ========== */
+.filter-options {
+	display: flex;
+	flex-direction: column;
+	gap: 8rpx;
+	padding: 8rpx 0;
+}
+
+.option-chip {
+	height: 56rpx;
+	padding: 0 16rpx;
+	border-radius: 12rpx;
+	background: rgba(255, 255, 255, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	border: 2rpx solid transparent;
+}
+
+.option-chip--active {
+	background: #00C853;
+	border-color: #00C853;
+}
+
+.option-text {
+	font-size: 22rpx;
+	color: #333333;
+}
+
+.option-chip--active .option-text {
+	color: #FFFFFF;
+	font-weight: 600;
+}
+
+/* ========== AI 教练卡片 ========== */
+.coach-options {
+	display: flex;
+	flex-direction: column;
+	gap: 12rpx;
+	padding: 8rpx 0;
+}
+
+.coach-card {
+	min-height: 72rpx;
+	padding: 12rpx;
+	border-radius: 16rpx;
+	background: #1E3A8A;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12rpx;
+	transition: all 0.2s ease;
+	border: 3rpx solid transparent;
+}
+
+.coach-card--active {
+	border-color: #00C853;
+	box-shadow: 0 4rpx 12rpx rgba(0, 200, 83, 0.3);
+}
+
+.coach-avatar {
+	width: 48rpx;
+	height: 48rpx;
+	flex-shrink: 0;
+}
+
+.coach-name {
+	flex: 1;
+	font-size: 22rpx;
+	color: #FFFFFF;
+	font-weight: 600;
+	line-height: 1.3;
+}
+</style>

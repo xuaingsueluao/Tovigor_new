@@ -1,0 +1,78 @@
+{
+	"pages": [
+		{
+			"path": "pages/idle/idle",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"bounce": "none"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Tovigor健身",
+				"bounce": "none",
+				"scrollIndicator": "none"
+			}
+		},
+		{
+			"path": "pages/freeTraining/free-training",
+			"style": {
+				"navigationBarTitleText": "自由训练"
+			}
+		},
+		{
+			"path": "pages/partTraining/part-training",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true,
+				"bounce": "none"
+			}
+		},
+		{
+			"path": "pages/smartAssess/first-skip",
+			"style": {
+				"navigationBarTitleText": "智能评估"
+			}
+		},
+		{
+			"path": "pages/smartAssess/strength-assess",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/smartAssess/body-function-assess",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true,
+				"bounce": "none"
+			}
+		},
+		{
+			"path": "pages/serial-test/serial-test",
+			"style": {
+				"navigationBarTitleText": "串口测试"
+			}
+		},
+		{
+			"path": "pages/aiRecommend/ai-recommend",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true,
+				"bounce": "none"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Tovigor健身",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}
