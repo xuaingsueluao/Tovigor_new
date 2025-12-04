@@ -60,7 +60,7 @@
 			}
 		},
 		{
-			"path": "pages/aiRecommend/ai-recommend",
+			"path": "pages/partTraining/components/ai-recommend",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom",

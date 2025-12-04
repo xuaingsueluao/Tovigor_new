@@ -337,7 +337,7 @@ const getSelectedLabels = (groupKey, options) => {
 // 跳转到AI推荐页面
 const goToAIRecommend = () => {
 	uni.navigateTo({
-		url: '/pages/aiRecommend/ai-recommend'
+		url: '/pages/partTraining/components/ai-recommend'
 	})
 }
 </script>
