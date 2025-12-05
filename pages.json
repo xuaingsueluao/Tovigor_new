@@ -34,7 +34,7 @@
 			}
 		},
 		{
-			"path": "pages/partTraining/part-training-detail",
+			"path": "pages/partTraining/part-training-detail-adapter",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom",
