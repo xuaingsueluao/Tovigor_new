@@ -1,0 +1,311 @@
+<!--
+ * 练前热身页面
+ * 功能：课程开始前的热身指导，展示动态进度和AI教练建议
+ * 结构：全屏背景图 + 返回按钮 + 进度条 + 气泡对话框 + 虚拟形象缩略图
+ -->
+<template>
+	<view class="warm-up-page">
+		<!-- 全屏背景图（占位图，后续替换为视频） -->
+		<image 
+			class="background-image" 
+			src="/static/icons/partTrainingActivity/startTraining/trainingActivity_placeHolder.webp" 
+			mode="aspectFill"
+		/>
+		
+		<!-- 返回按钮（左上角浮层） -->
+		<CommonBackButton class="back-btn-position" />
+		
+		<!-- 标题（顶部居中） -->
+		<view class="header-title">
+			<text class="title-text">练前热身</text>
+		</view>
+		
+		<!-- 进度条（顶部下方） -->
+		<view class="progress-section">
+			<StepBar :totalSteps="12" :currentStep="currentStep" />
+		</view>
+		
+		<!-- AI教练气泡对话框 -->
+		<view class="coach-dialog-section">
+			<BubbleDialogBox
+				roleLabel="Vince(艾斯)"
+				:avatarUrl="coachAvatarUrl"
+				badgeBackground="linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)"
+				:text="currentWarmupTip"
+				contentBackground="rgba(255, 255, 255, 0.85)"
+				:showShadow="true"
+			/>
+		</view>
+		
+		<!-- 虚拟形象模拟缩略图（左下角） -->
+		<view class="virtual-character-container">
+			<!-- 左上角关闭按钮 -->
+			<CommonCloseButton 
+				class="close-btn-position"
+				backgroundColor="rgba(0, 0, 0, 0.3)"
+				:opacity="1"
+				@close="closeVirtualCharacter"
+			/>
+			
+			<!-- 居中标题文字 -->
+			<text class="virtual-title">虚拟形象模拟</text>
+			
+			<!-- 人物图片 -->
+			<image 
+				class="virtual-character-image" 
+				src="/static/icons/partTrainingActivity/startTraining/virtual-character.png" 
+				mode="aspectFit"
+			/>
+		</view>
+		
+		<!-- 测试按钮：跳过热身，直接进入下一页 -->
+		<view v-if="SHOW_TEST_BUTTON" class="test-btn" @click="skipToNextPage">
+			<text class="test-btn-text">跳过热身</text>
+		</view>
+	</view>
+</template>
+
+<script setup>
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { onShow } from '@dcloudio/uni-app'
+import CommonBackButton from '@/components/ui-box/common-back-button.vue'
+import CommonCloseButton from '@/components/ui-box/common-close-button.vue'
+import StepBar from '@/components/ui-box/step-bar.vue'
+import BubbleDialogBox from '@/components/ui-box/bubble-dialog-box.vue'
+
+// ========== 测试开关：设置为 false 关闭测试按钮 ==========
+const SHOW_TEST_BUTTON = ref(true)
+
+// ========== 配置项 ==========
+// 每段进度的时间间隔（毫秒），可在此修改
+const STEP_INTERVAL_MS = 30000  // 默认 3 秒
+
+// AI教练头像
+const coachAvatarUrl = '/static/icons/partTrainingActivity/AI_coach_Vince.png'
+
+// 热身建议列表（6个阶段，每个阶段对应2段进度条）
+const warmupTips = [
+	'1. 上半身保持竖直，膝盖不要弯曲',
+	'2. 双手自然下垂，放松肩部肌肉',
+	'3. 缓慢转动颈部，活动颈椎关节',
+	'4. 深呼吸，吸气时腹部膨胀，呼气时收紧',
+	'5. 轻轻扭动腰部，左右各转动3-5次',
+	'6. 准备完成，即将开始正式训练！'
+]
+
+// ========== 响应式状态 ==========
+const currentStep = ref(1)  // 当前进度（1-12）
+let progressTimer = null    // 定时器引用
+
+// 根据当前步骤计算对应的热身建议（每2步一个阶段）
+const currentWarmupTip = computed(() => {
+	const stageIndex = Math.ceil(currentStep.value / 2) - 1  // 0-5
+	return warmupTips[stageIndex] || warmupTips[0]
+})
+
+// ========== 生命周期 ==========
+onMounted(() => {
+	startProgressTimer()
+})
+
+// 页面显示时重置并重新开始计时
+onShow(() => {
+	resetProgress()
+	startProgressTimer()
+})
+
+onBeforeUnmount(() => {
+	clearProgressTimer()
+})
+
+// ========== 进度控制函数 ==========
+// 开始进度计时
+const startProgressTimer = () => {
+	clearProgressTimer()  // 先清除旧定时器
+	
+	progressTimer = setInterval(() => {
+		if (currentStep.value < 12) {
+			currentStep.value++
+		} else {
+			// 进度完成，自动跳转到下一页
+			clearProgressTimer()
+			navigateToNextPage()
+		}
+	}, STEP_INTERVAL_MS)
+}
+
+// 清除定时器
+const clearProgressTimer = () => {
+	if (progressTimer) {
+		clearInterval(progressTimer)
+		progressTimer = null
+	}
+}
+
+// 重置进度
+const resetProgress = () => {
+	currentStep.value = 1
+}
+
+// ========== 页面跳转 ==========
+// 跳转到下一页：调整器械
+const navigateToNextPage = () => {
+	uni.navigateTo({
+		url: '/pages/partTraining/adjust-equipment'  // TODO: 创建此页面
+	})
+}
+
+// 测试按钮：跳过热身
+const skipToNextPage = () => {
+	clearProgressTimer()
+	navigateToNextPage()
+}
+
+// 关闭虚拟形象模拟
+const closeVirtualCharacter = () => {
+	console.log('关闭虚拟形象模拟')
+	// TODO: 可以添加隐藏逻辑或其他交互
+	uni.showToast({
+		title: '功能开发中',
+		icon: 'none'
+	})
+}
+</script>
+
+<style scoped lang="scss">
+/* ========== 页面容器（全屏背景） ========== */
+.warm-up-page {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	background-color: #000000;  /* 背景色兜底 */
+}
+
+/* 全屏背景图 */
+.background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+/* ========== 返回按钮（浮层） ========== */
+.back-btn-position {
+	position: absolute;
+	left: 24rpx;
+	top: 24rpx;
+	z-index: 100;
+}
+
+/* ========== 标题（浮层） ========== */
+.header-title {
+	position: absolute;
+	top: 24rpx;
+	left: 0;
+	right: 0;
+	z-index: 90;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 88rpx;
+}
+
+.title-text {
+	font-size: 36rpx;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.5);
+}
+
+/* ========== 进度条区域（浮层） ========== */
+.progress-section {
+	position: absolute;
+	top: 120rpx;
+	left: 24rpx;
+	right: 24rpx;
+	z-index: 90;
+}
+
+/* ========== AI教练气泡对话框（浮层） ========== */
+.coach-dialog-section {
+	position: absolute;
+	top: 140rpx;
+	left: 24rpx;
+	right: 200rpx;  /* 右侧留白，避免遮挡人物 */
+	z-index: 80;
+}
+
+/* ========== 虚拟形象模拟容器（左下角矩形） ========== */
+.virtual-character-container {
+	position: absolute;  /* 相对于页面定位 */
+	left: 24rpx;
+	bottom: 200rpx;       /* 距离底部的距离 */
+	z-index: 70;         /* 保证在进度条和气泡对话框下方 */
+	width: 140rpx;
+	padding: 20rpx;
+	background-color: rgba(255, 255, 255, 0.4);  /* 40% 不透明度 */
+	backdrop-filter: blur(10rpx);
+	border-radius: 16rpx;
+	box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.15);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* 注意：这里不能再写 position: relative，会覆盖上面的 absolute */
+	/* 关闭按钮的 absolute 定位会自动找到最近的非 static 祖先元素（这里就是自己的 absolute） */
+}
+
+/* 左上角关闭按钮定位 */
+.close-btn-position {
+	position: absolute;
+	top: 8rpx;
+	left: 8rpx;
+	z-index: 10;
+}
+
+/* 居中标题文字 */
+.virtual-title {
+	font-size: 18rpx;
+	font-weight: 600;
+	color: #333333;
+	text-align: center;
+	margin-bottom: 12rpx;
+}
+
+/* 人物图片 */
+.virtual-character-image {
+	width: 140rpx;
+	height: 140rpx;
+}
+
+/* ========== 测试按钮（右侧浮层） ========== */
+.test-btn {
+	position: absolute;
+	top: 50%;
+	right: 30rpx;
+	z-index: 200;
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+	box-shadow: 0 8rpx 24rpx rgba(255, 107, 107, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+}
+
+.test-btn:active {
+	transform: scale(0.95);
+}
+
+.test-btn-text {
+	font-size: 24rpx;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 1.3;
+}
+</style>

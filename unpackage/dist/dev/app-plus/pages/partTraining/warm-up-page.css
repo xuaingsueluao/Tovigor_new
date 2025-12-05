@@ -1,0 +1,394 @@
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+.back-btn[data-v-050e9f87] {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.back-btn[data-v-050e9f87]:active {
+  opacity: 0.7;
+}
+.back-icon[data-v-050e9f87] {
+  width: 1.1875rem;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+.close-btn[data-v-4254237c] {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.close-btn[data-v-4254237c]:active {
+  opacity: 0.7;
+}
+
+/* X 图标容器 */
+.close-icon[data-v-4254237c] {
+  position: relative;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* X 的两条线 */
+.close-line[data-v-4254237c] {
+  position: absolute;
+  width: 0.5625rem;
+  height: 0.0625rem;
+  background-color: #FFFFFF;
+  border-radius: 0.03125rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+/* 第一条线：从左上到右下（旋转 45 度） */
+.close-line-1[data-v-4254237c] {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* 第二条线：从右上到左下（旋转 -45 度） */
+.close-line-2[data-v-4254237c] {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*
+ * 组件结构说明：
+ * .close-btn (30rpx × 30rpx)          ← 圆形按钮背景，可点击区域
+ *   └─ .close-icon (16rpx × 16rpx)    ← X 图标的容器，用于定位两条线
+ *       ├─ .close-line-1 (18rpx × 2rpx)  ← 第一条斜线 (/)
+ *       └─ .close-line-2 (18rpx × 2rpx)  ← 第二条斜线 (\)
+ * 
+ * 尺寸调整：
+ * - 改 .close-btn 的 width/height → 改变点击区域和背景大小
+ * - 改 .close-icon 的 width/height → 改变 X 图标大小
+ * - 改 .close-line 的 width → 改变线条长度
+ * - 改 .close-line 的 height → 改变线条粗细
+ *   尺寸关系建议：按钮尺寸 (close-btn) : X容器 (close-icon) : 线长 (close-line width) ≈ 30 : 16 : 18
+ *   如果你想改大按钮，同比例放大所有尺寸
+ */
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+.step-bar[data-v-5b9e5f0d] {
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+}
+.step-item[data-v-5b9e5f0d] {
+  flex: 1;
+  height: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 31.21875rem;
+  background-color: #e0e0e0;
+  transition: background-color 0.25s;
+}
+.step-item[data-v-5b9e5f0d]:last-child {
+  margin-right: 0;
+}
+.step-item-active[data-v-5b9e5f0d] {
+  background-color: #00C853;
+}
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+/* ========== 整体容器 ========== */
+.bubble-dialog[data-v-fb4bd76e] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* 贴左对齐 */
+}
+
+/* ========== 上方小气泡：名字 + 头像（胶囊形状） ========== */
+.bubble-header[data-v-fb4bd76e] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  padding: 0 0.3125rem;
+  /* 上下内边距稍微小一点，左右内边距宽一点 */
+  border-radius: 0.75rem 0.75rem 0 0;
+  /* 只保留上边两个圆角，下面是直线 */
+  margin-left: 0.9375rem;
+  /* 整个小气泡向右偏一点，数值你可以按视觉再微调 */
+  margin-bottom: -0.1875rem;
+  /* 与下方大气泡做一点重叠，看起来是连在一起的 */
+  overflow: hidden;
+  /* 保证底边是干净的一条直线 */
+}
+
+/* 角色名字文字 */
+.role-text[data-v-fb4bd76e] {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-right: 0.375rem;
+}
+
+/* 头像：直接展示整张透明 PNG，不再裁成圆形 */
+.role-avatar[data-v-fb4bd76e] {
+  width: 2.0625rem;
+  /* 这里按你图的比例调 */
+  height: 2.0625rem;
+  margin-left: 0.3125rem;
+  border-radius: 0;
+  border: none;
+  flex-shrink: 0;
+}
+
+/* ========== 下方大气泡：对话内容 ========== */
+.bubble-content[data-v-fb4bd76e] {
+  padding: 0.5rem 0.5rem;
+  /* 内边距 */
+  border-radius: 0.75rem;
+  /* 四个角都是圆角 */
+  transition: all 0.2s ease;
+  /* 移除 align-self: stretch，让气泡根据内容自适应宽度 */
+  max-width: 100%;
+  /* 防止超出容器 */
+  /* 横向拉伸填满容器 */
+}
+
+/* 对话文字 */
+.bubble-text[data-v-fb4bd76e] {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  display: block;
+  word-wrap: break-word;
+  /* 长文本自动换行 */
+}
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+/* ========== 页面容器（全屏背景） ========== */
+.warm-up-page[data-v-cf52f72f] {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+  /* 背景色兜底 */
+}
+
+/* 全屏背景图 */
+.background-image[data-v-cf52f72f] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ========== 返回按钮（浮层） ========== */
+.back-btn-position[data-v-cf52f72f] {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+}
+
+/* ========== 标题（浮层） ========== */
+.header-title[data-v-cf52f72f] {
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.75rem;
+}
+.title-text[data-v-cf52f72f] {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+/* ========== 进度条区域（浮层） ========== */
+.progress-section[data-v-cf52f72f] {
+  position: absolute;
+  top: 3.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  z-index: 90;
+}
+
+/* ========== AI教练气泡对话框（浮层） ========== */
+.coach-dialog-section[data-v-cf52f72f] {
+  position: absolute;
+  top: 4.375rem;
+  left: 0.75rem;
+  right: 6.25rem;
+  /* 右侧留白，避免遮挡人物 */
+  z-index: 80;
+}
+
+/* ========== 虚拟形象模拟容器（左下角矩形） ========== */
+.virtual-character-container[data-v-cf52f72f] {
+  position: absolute;
+  /* 相对于页面定位 */
+  left: 0.75rem;
+  bottom: 6.25rem;
+  /* 距离底部的距离 */
+  z-index: 70;
+  /* 保证在进度条和气泡对话框下方 */
+  width: 4.375rem;
+  padding: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  /* 40% 不透明度 */
+  -webkit-backdrop-filter: blur(0.3125rem);
+          backdrop-filter: blur(0.3125rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 注意：这里不能再写 position: relative，会覆盖上面的 absolute */
+  /* 关闭按钮的 absolute 定位会自动找到最近的非 static 祖先元素（这里就是自己的 absolute） */
+}
+
+/* 左上角关闭按钮定位 */
+.close-btn-position[data-v-cf52f72f] {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  z-index: 10;
+}
+
+/* 居中标题文字 */
+.virtual-title[data-v-cf52f72f] {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 0.375rem;
+}
+
+/* 人物图片 */
+.virtual-character-image[data-v-cf52f72f] {
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+/* ========== 测试按钮（右侧浮层） ========== */
+.test-btn[data-v-cf52f72f] {
+  position: absolute;
+  top: 50%;
+  right: 0.9375rem;
+  z-index: 200;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  box-shadow: 0 0.25rem 0.75rem rgba(255, 107, 107, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.test-btn[data-v-cf52f72f]:active {
+  transform: scale(0.95);
+}
+.test-btn-text[data-v-cf52f72f] {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 1.3;
+}

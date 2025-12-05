@@ -125,14 +125,10 @@ const props = defineProps({
 // 开始训练
 const startTraining = () => {
 	console.log('开始训练课程:', props.course.title)
-	uni.showToast({
-		title: '开始训练功能开发中',
-		icon: 'none'
+	// 跳转到热身页面
+	uni.navigateTo({
+		url: '/pages/partTraining/warm-up-page?courseId=' + props.course.id
 	})
-	// TODO: 跳转到训练页面
-	// uni.navigateTo({
-	//   url: '/pages/training/training?courseId=' + props.course.id
-	// })
 }
 </script>
 

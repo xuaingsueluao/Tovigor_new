@@ -31,7 +31,7 @@ if (uni.restoreGlobal) {
 }
 (function(vue) {
   "use strict";
-  const _imports_0$8 = "/static/icons/ads/idle.mp4";
+  const _imports_0$9 = "/static/icons/ads/idle.mp4";
   const _export_sfc = (sfc, props) => {
     const target = sfc.__vccOpts || sfc;
     for (const [key, val] of props) {
@@ -39,7 +39,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$k = {
+  const _sfc_main$o = {
     __name: "idle",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -53,7 +53,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       vue.Fragment,
       null,
@@ -69,7 +69,7 @@ if (uni.restoreGlobal) {
           [
             vue.createElementVNode("video", {
               class: "bg-video",
-              src: _imports_0$8,
+              src: _imports_0$9,
               autoplay: "",
               loop: "",
               muted: "",
@@ -87,8 +87,8 @@ if (uni.restoreGlobal) {
       /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
     );
   }
-  const PagesIdleIdle = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__scopeId", "data-v-83b0fca5"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/idle/idle.vue"]]);
-  const _sfc_main$j = {
+  const PagesIdleIdle = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n], ["__scopeId", "data-v-83b0fca5"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/idle/idle.vue"]]);
+  const _sfc_main$n = {
     __name: "modal-container",
     props: {
       // 是否显示弹窗
@@ -186,7 +186,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
     return $props.visible ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -223,10 +223,10 @@ if (uni.restoreGlobal) {
       /* CLASS */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const ModalContainer = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-2f7b8f3c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/modals/modal-container.vue"]]);
-  const _imports_0$7 = "/static/icons/general/btn_general_close.svg";
-  const _imports_0$6 = "/static/icons/smartAssessActivity/li-liang/btn_back.svg";
-  const _sfc_main$i = {
+  const ModalContainer = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-2f7b8f3c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/modals/modal-container.vue"]]);
+  const _imports_0$8 = "/static/icons/general/btn_general_close.svg";
+  const _imports_0$7 = "/static/icons/smartAssessActivity/li-liang/btn_back.svg";
+  const _sfc_main$m = {
     __name: "usage-guide-modal",
     props: {
       // 是否显示弹窗
@@ -287,7 +287,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["ModalContainer"], {
       visible: $props.visible,
       "onUpdate:visible": _cache[0] || (_cache[0] = ($event) => _ctx.$emit("update:visible", $event)),
@@ -313,7 +313,7 @@ if (uni.restoreGlobal) {
             }, [
               vue.createElementVNode("image", {
                 class: "close-icon",
-                src: _imports_0$7,
+                src: _imports_0$8,
                 mode: "aspectFit"
               })
             ])
@@ -367,7 +367,7 @@ if (uni.restoreGlobal) {
                 }, [
                   vue.createElementVNode("image", {
                     class: "back-icon",
-                    src: _imports_0$6,
+                    src: _imports_0$7,
                     mode: "aspectFit"
                   })
                 ]),
@@ -378,7 +378,7 @@ if (uni.restoreGlobal) {
                 }, [
                   vue.createElementVNode("image", {
                     class: "close-icon",
-                    src: _imports_0$7,
+                    src: _imports_0$8,
                     mode: "aspectFit"
                   })
                 ])
@@ -421,14 +421,14 @@ if (uni.restoreGlobal) {
       /* STABLE */
     }, 8, ["visible"]);
   }
-  const UsageGuideModal = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-cda377bd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/modals/usage-guide-modal.vue"]]);
-  const _imports_0$5 = "/static/icons/homeActivity/btn_usage_guide.svg";
-  const _imports_1$5 = "/static/icons/homeActivity/bg_free_training.svg";
+  const UsageGuideModal = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__scopeId", "data-v-cda377bd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/modals/usage-guide-modal.vue"]]);
+  const _imports_0$6 = "/static/icons/homeActivity/btn_usage_guide.svg";
+  const _imports_1$6 = "/static/icons/homeActivity/bg_free_training.svg";
   const _imports_2$3 = "/static/icons/homeActivity/bg_body_training.svg";
   const _imports_3$2 = "/static/icons/homeActivity/bg_smart_assess.svg";
   const _imports_4$1 = "/static/icons/homeActivity/ic_games.svg";
   const _imports_5$1 = "/static/icons/homeActivity/trimming.png";
-  const _sfc_main$h = {
+  const _sfc_main$l = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -532,14 +532,14 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createCommentVNode(" 顶部标题区域 "),
       vue.createElementVNode("view", { class: "header" }, [
         vue.createElementVNode("view", { class: "header-title" }, [
           vue.createElementVNode("image", {
             class: "usage-guide-btn",
-            src: _imports_0$5,
+            src: _imports_0$6,
             mode: "aspectFit",
             onClick: $setup.showUsageGuide
           }),
@@ -558,7 +558,7 @@ if (uni.restoreGlobal) {
           vue.createElementVNode("view", { class: "card card-large card-free" }, [
             vue.createElementVNode("image", {
               class: "card-bg-img",
-              src: _imports_1$5,
+              src: _imports_1$6,
               mode: "aspectFill"
             }),
             vue.createElementVNode("view", { class: "card-content" }, [
@@ -699,7 +699,8 @@ if (uni.restoreGlobal) {
       }, null, 8, ["visible", "guide-items"])
     ]);
   }
-  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-1cf27b2a"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/index/index.vue"]]);
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$k], ["__scopeId", "data-v-1cf27b2a"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/index/index.vue"]]);
+  const ON_SHOW = "onShow";
   const ON_LOAD = "onLoad";
   const ON_READY = "onReady";
   const ON_BACK_PRESS = "onBackPress";
@@ -713,6 +714,11 @@ if (uni.restoreGlobal) {
   const createLifeCycleHook = (lifecycle, flag = 0) => (hook, target = vue.getCurrentInstance()) => {
     !vue.isInSSRComponentSetup && vue.injectHook(lifecycle, hook, target);
   };
+  const onShow = /* @__PURE__ */ createLifeCycleHook(
+    ON_SHOW,
+    1 | 2
+    /* HookFlags.PAGE */
+  );
   const onLoad = /* @__PURE__ */ createLifeCycleHook(
     ON_LOAD,
     2
@@ -728,8 +734,8 @@ if (uni.restoreGlobal) {
     2
     /* HookFlags.PAGE */
   );
-  const _imports_0$4 = "/static/icons/freeTrainingActivity/bg_statBoard.png";
-  const _imports_1$4 = "/static/icons/freeTrainingActivity/ic_counts.png";
+  const _imports_0$5 = "/static/icons/freeTrainingActivity/bg_statBoard.png";
+  const _imports_1$5 = "/static/icons/freeTrainingActivity/ic_counts.png";
   const _imports_2$2 = "/static/icons/freeTrainingActivity/ic_separate.png";
   const _imports_3$1 = "/static/icons/freeTrainingActivity/ic_train_time.png";
   const _imports_4 = "/static/icons/freeTrainingActivity/ic_calories.png";
@@ -737,7 +743,7 @@ if (uni.restoreGlobal) {
   const _imports_6 = "/static/icons/freeTrainingActivity/ic_decoration.png";
   const _imports_7 = "/static/icons/freeTrainingActivity/ic_power.svg";
   const UPDATE_INTERVAL = 20;
-  const _sfc_main$g = {
+  const _sfc_main$k = {
     __name: "free-training",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -927,7 +933,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_ModalGeneral = vue.resolveComponent("ModalGeneral");
     return vue.openBlock(), vue.createElementBlock(
       "view",
@@ -941,7 +947,7 @@ if (uni.restoreGlobal) {
         vue.createElementVNode("view", { class: "stat-board" }, [
           vue.createElementVNode("image", {
             class: "board-bg",
-            src: _imports_0$4,
+            src: _imports_0$5,
             mode: "aspectFill"
           }),
           vue.createElementVNode("view", { class: "stat-row" }, [
@@ -949,7 +955,7 @@ if (uni.restoreGlobal) {
             vue.createElementVNode("view", { class: "stat-item" }, [
               vue.createElementVNode("image", {
                 class: "stat-icon",
-                src: _imports_1$4,
+                src: _imports_1$5,
                 mode: "aspectFit"
               }),
               vue.createElementVNode("view", { class: "stat-content" }, [
@@ -1179,8 +1185,8 @@ if (uni.restoreGlobal) {
       /* NEED_HYDRATION */
     );
   }
-  const PagesFreeTrainingFreeTraining = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-97b8fabd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/freeTraining/free-training.vue"]]);
-  const _sfc_main$f = {
+  const PagesFreeTrainingFreeTraining = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__scopeId", "data-v-97b8fabd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/freeTraining/free-training.vue"]]);
+  const _sfc_main$j = {
     __name: "common-back-button",
     props: {
       // 是否使用默认返回行为（uni.navigateBack）
@@ -1205,20 +1211,20 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", {
       class: "back-btn",
       onClick: $setup.handleClick
     }, [
       vue.createElementVNode("image", {
         class: "back-icon",
-        src: _imports_0$6,
+        src: _imports_0$7,
         mode: "widthFix"
       })
     ]);
   }
-  const CommonBackButton = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-050e9f87"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/common-back-button.vue"]]);
-  const _sfc_main$e = {
+  const CommonBackButton = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-050e9f87"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/common-back-button.vue"]]);
+  const _sfc_main$i = {
     __name: "filter-pill",
     props: {
       label: { type: String, required: true },
@@ -1241,7 +1247,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -1279,9 +1285,9 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const FilterPill = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-2ff79513"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/filter-pill.vue"]]);
-  const _imports_0$3 = "/static/icons/partTrainingActivity/AI_coach_Vince.png";
-  const _sfc_main$d = {
+  const FilterPill = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-2ff79513"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/filter-pill.vue"]]);
+  const _imports_0$4 = "/static/icons/partTrainingActivity/AI_coach_Vince.png";
+  const _sfc_main$h = {
     __name: "training-filter-sidebar",
     props: {
       // 由父组件传入当前筛选状态
@@ -1409,7 +1415,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "sidebar" }, [
       vue.createCommentVNode(" 顶部 AI 推荐头像块 "),
       vue.createElementVNode("view", { class: "ai-header" }, [
@@ -1419,7 +1425,7 @@ if (uni.restoreGlobal) {
         }, [
           vue.createElementVNode("image", {
             class: "ai-avatar",
-            src: _imports_0$3,
+            src: _imports_0$4,
             mode: "aspectFit"
           }),
           vue.createElementVNode("text", { class: "ai-text" }, "AI推荐")
@@ -1709,8 +1715,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const TrainingFilterSidebar = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-ebd14bbd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/training-filter-sidebar.vue"]]);
-  const _sfc_main$c = {
+  const TrainingFilterSidebar = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-ebd14bbd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/training-filter-sidebar.vue"]]);
+  const _sfc_main$g = {
     __name: "training-course-card",
     props: {
       course: {
@@ -1748,7 +1754,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", {
       class: "course-card",
       onClick: $setup.handleClick
@@ -1805,8 +1811,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const TrainingCourseCard = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-cf2e1a6c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/course-list/training-course-card.vue"]]);
-  const _sfc_main$b = {
+  const TrainingCourseCard = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-cf2e1a6c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/course-list/training-course-card.vue"]]);
+  const _sfc_main$f = {
     __name: "part-training",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -1902,7 +1908,7 @@ if (uni.restoreGlobal) {
       };
       const handleCourseClick = (course) => {
         uni.navigateTo({
-          url: "/pages/partTraining/part-training-detail?id=" + course.id
+          url: "/pages/partTraining/part-training-detail-adapter?id=" + course.id
         });
       };
       const handleCoursePlay = (course) => {
@@ -1924,7 +1930,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "page" }, [
       vue.createCommentVNode(" 顶部导航 "),
       vue.createElementVNode("view", { class: "header" }, [
@@ -1992,9 +1998,9 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesPartTrainingPartTraining = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-342360d0"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training.vue"]]);
-  const _sfc_main$a = {
-    __name: "part-course-detail",
+  const PagesPartTrainingPartTraining = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-342360d0"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training.vue"]]);
+  const _sfc_main$e = {
+    __name: "course-detail",
     props: {
       course: {
         type: Object,
@@ -2005,10 +2011,9 @@ if (uni.restoreGlobal) {
       __expose();
       const props = __props;
       const startTraining = () => {
-        formatAppLog("log", "at pages/partTraining/components/part-course-detail.vue:127", "开始训练课程:", props.course.title);
-        uni.showToast({
-          title: "开始训练功能开发中",
-          icon: "none"
+        formatAppLog("log", "at pages/partTraining/components/course-detail.vue:127", "开始训练课程:", props.course.title);
+        uni.navigateTo({
+          url: "/pages/partTraining/warm-up-page?courseId=" + props.course.id
         });
       };
       const __returned__ = { props, startTraining, CommonBackButton };
@@ -2016,7 +2021,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "course-detail" }, [
       vue.createCommentVNode(" 顶部导航栏 "),
       vue.createElementVNode("view", { class: "header" }, [
@@ -2176,9 +2181,9 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PartCourseDetail = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-a70b0841"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/part-course-detail.vue"]]);
-  const _sfc_main$9 = {
-    __name: "part-training-detail",
+  const CourseDetail = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-f6bfaf64"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/course-detail.vue"]]);
+  const _sfc_main$d = {
+    __name: "part-training-detail-adapter",
     setup(__props, { expose: __expose }) {
       __expose();
       const course = vue.ref(null);
@@ -2389,14 +2394,14 @@ if (uni.restoreGlobal) {
       });
       const __returned__ = { course, allCourses, ref: vue.ref, get onLoad() {
         return onLoad;
-      }, PartCourseDetail };
+      }, CourseDetail };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "detail-page" }, [
-      $setup.course ? (vue.openBlock(), vue.createBlock($setup["PartCourseDetail"], {
+      $setup.course ? (vue.openBlock(), vue.createBlock($setup["CourseDetail"], {
         key: 0,
         course: $setup.course
       }, null, 8, ["course"])) : (vue.openBlock(), vue.createElementBlock("view", {
@@ -2405,12 +2410,387 @@ if (uni.restoreGlobal) {
       }, "加载中..."))
     ]);
   }
-  const PagesPartTrainingPartTrainingDetail = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-436b7f41"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training-detail.vue"]]);
+  const PagesPartTrainingPartTrainingDetailAdapter = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-d35381b9"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training-detail-adapter.vue"]]);
+  const _sfc_main$c = {
+    __name: "common-close-button",
+    props: {
+      // 背景色（支持 rgba）
+      backgroundColor: {
+        type: String,
+        default: "rgba(0, 0, 0, 0.3)"
+      },
+      // 整体透明度（0-1）
+      opacity: {
+        type: Number,
+        default: 1
+      },
+      // 是否使用默认关闭行为（触发父组件隐藏逻辑）
+      useDefault: {
+        type: Boolean,
+        default: true
+      }
+    },
+    emits: ["click", "close"],
+    setup(__props, { expose: __expose, emit: __emit }) {
+      __expose();
+      const props = __props;
+      const emits = __emit;
+      const handleClick = () => {
+        emits("click");
+        if (props.useDefault) {
+          emits("close");
+        }
+      };
+      const __returned__ = { props, emits, handleClick };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(
+      "view",
+      {
+        class: "close-btn",
+        style: vue.normalizeStyle({
+          backgroundColor: $props.backgroundColor,
+          opacity: $props.opacity
+        }),
+        onClick: $setup.handleClick
+      },
+      [
+        vue.createCommentVNode(" X 图标：使用两条交叉的线绘制 "),
+        vue.createElementVNode("view", { class: "close-icon" }, [
+          vue.createElementVNode("view", { class: "close-line close-line-1" }),
+          vue.createElementVNode("view", { class: "close-line close-line-2" })
+        ])
+      ],
+      4
+      /* STYLE */
+    );
+  }
+  const CommonCloseButton = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-4254237c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/common-close-button.vue"]]);
+  const _sfc_main$b = {
+    __name: "step-bar",
+    props: {
+      totalSteps: {
+        type: Number,
+        // 总步骤数
+        required: true
+      },
+      currentStep: {
+        type: Number,
+        // 当前步骤（从1开始计数，如currentStep=1表示第1步完成）
+        required: true
+      }
+    },
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const props = __props;
+      const __returned__ = { props };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "step-bar" }, [
+      (vue.openBlock(true), vue.createElementBlock(
+        vue.Fragment,
+        null,
+        vue.renderList($props.totalSteps, (item, index) => {
+          return vue.openBlock(), vue.createElementBlock(
+            "view",
+            {
+              key: index,
+              class: vue.normalizeClass(["step-item", { "step-item-active": index < $props.currentStep }])
+            },
+            null,
+            2
+            /* CLASS */
+          );
+        }),
+        128
+        /* KEYED_FRAGMENT */
+      ))
+    ]);
+  }
+  const StepBar = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-5b9e5f0d"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/step-bar.vue"]]);
+  const _sfc_main$a = {
+    __name: "bubble-dialog-box",
+    props: {
+      // 角色标签文字（例如："Vince(艾斯)"、"AI助手"）
+      roleLabel: {
+        type: String,
+        default: "AI助手"
+      },
+      // 头像图片地址
+      avatarUrl: {
+        type: String,
+        default: "/static/icons/homeActivity/trimming.png"
+      },
+      // 标签背景色/渐变
+      badgeBackground: {
+        type: String,
+        default: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+      },
+      // 提示文字内容（如果使用插槽则忽略此参数）
+      text: {
+        type: String,
+        default: ""
+      },
+      // 文字颜色
+      textColor: {
+        type: String,
+        default: "#333333"
+      },
+      // 内容框背景色
+      contentBackground: {
+        type: String,
+        default: "rgba(255, 255, 255, 0.85)"
+        // 这里改默认透明度
+      },
+      // 是否显示阴影
+      showShadow: {
+        type: Boolean,
+        default: true
+      }
+    },
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const props = __props;
+      const __returned__ = { props };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "bubble-dialog" }, [
+      vue.createCommentVNode(" 上方小气泡：角色名字 + 头像 "),
+      vue.createElementVNode(
+        "view",
+        {
+          class: "bubble-header",
+          style: vue.normalizeStyle({ background: $props.badgeBackground })
+        },
+        [
+          vue.createElementVNode(
+            "text",
+            { class: "role-text" },
+            vue.toDisplayString($props.roleLabel),
+            1
+            /* TEXT */
+          ),
+          vue.createElementVNode("image", {
+            class: "role-avatar",
+            src: $props.avatarUrl,
+            mode: "aspectFit"
+          }, null, 8, ["src"])
+        ],
+        4
+        /* STYLE */
+      ),
+      vue.createCommentVNode(" 下方大气泡：对话内容 "),
+      vue.createElementVNode(
+        "view",
+        {
+          class: "bubble-content",
+          style: vue.normalizeStyle({
+            background: $props.contentBackground,
+            boxShadow: $props.showShadow ? "0 6rpx 20rpx rgba(0, 0, 0, 0.15)" : "none"
+          })
+        },
+        [
+          vue.createCommentVNode(" 插槽优先，如果没有插槽内容则显示 text "),
+          vue.renderSlot(_ctx.$slots, "default", {}, () => [
+            vue.createElementVNode(
+              "text",
+              {
+                class: "bubble-text",
+                style: vue.normalizeStyle({ color: $props.textColor })
+              },
+              vue.toDisplayString($props.text),
+              5
+              /* TEXT, STYLE */
+            )
+          ], true)
+        ],
+        4
+        /* STYLE */
+      )
+    ]);
+  }
+  const BubbleDialogBox = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-fb4bd76e"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/bubble-dialog-box.vue"]]);
+  const _imports_0$3 = "/static/icons/partTrainingActivity/startTraining/trainingActivity_placeHolder.webp";
+  const _imports_1$4 = "/static/icons/partTrainingActivity/startTraining/virtual-character.png";
+  const STEP_INTERVAL_MS = 3e4;
+  const coachAvatarUrl = "/static/icons/partTrainingActivity/AI_coach_Vince.png";
+  const _sfc_main$9 = {
+    __name: "warm-up-page",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const SHOW_TEST_BUTTON2 = vue.ref(true);
+      const warmupTips = [
+        "1. 上半身保持竖直，膝盖不要弯曲",
+        "2. 双手自然下垂，放松肩部肌肉",
+        "3. 缓慢转动颈部，活动颈椎关节",
+        "4. 深呼吸，吸气时腹部膨胀，呼气时收紧",
+        "5. 轻轻扭动腰部，左右各转动3-5次",
+        "6. 准备完成，即将开始正式训练！"
+      ];
+      const currentStep = vue.ref(1);
+      let progressTimer = null;
+      const currentWarmupTip = vue.computed(() => {
+        const stageIndex = Math.ceil(currentStep.value / 2) - 1;
+        return warmupTips[stageIndex] || warmupTips[0];
+      });
+      vue.onMounted(() => {
+        startProgressTimer();
+      });
+      onShow(() => {
+        resetProgress();
+        startProgressTimer();
+      });
+      vue.onBeforeUnmount(() => {
+        clearProgressTimer();
+      });
+      const startProgressTimer = () => {
+        clearProgressTimer();
+        progressTimer = setInterval(() => {
+          if (currentStep.value < 12) {
+            currentStep.value++;
+          } else {
+            clearProgressTimer();
+            navigateToNextPage();
+          }
+        }, STEP_INTERVAL_MS);
+      };
+      const clearProgressTimer = () => {
+        if (progressTimer) {
+          clearInterval(progressTimer);
+          progressTimer = null;
+        }
+      };
+      const resetProgress = () => {
+        currentStep.value = 1;
+      };
+      const navigateToNextPage = () => {
+        uni.navigateTo({
+          url: "/pages/partTraining/adjust-equipment"
+          // TODO: 创建此页面
+        });
+      };
+      const skipToNextPage = () => {
+        clearProgressTimer();
+        navigateToNextPage();
+      };
+      const closeVirtualCharacter = () => {
+        formatAppLog("log", "at pages/partTraining/warm-up-page.vue:166", "关闭虚拟形象模拟");
+        uni.showToast({
+          title: "功能开发中",
+          icon: "none"
+        });
+      };
+      const __returned__ = { SHOW_TEST_BUTTON: SHOW_TEST_BUTTON2, STEP_INTERVAL_MS, coachAvatarUrl, warmupTips, currentStep, get progressTimer() {
+        return progressTimer;
+      }, set progressTimer(v) {
+        progressTimer = v;
+      }, currentWarmupTip, startProgressTimer, clearProgressTimer, resetProgress, navigateToNextPage, skipToNextPage, closeVirtualCharacter, ref: vue.ref, computed: vue.computed, onMounted: vue.onMounted, onBeforeUnmount: vue.onBeforeUnmount, get onShow() {
+        return onShow;
+      }, CommonBackButton, CommonCloseButton, StepBar, BubbleDialogBox };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "warm-up-page" }, [
+      vue.createCommentVNode(" 全屏背景图（占位图，后续替换为视频） "),
+      vue.createElementVNode("image", {
+        class: "background-image",
+        src: _imports_0$3,
+        mode: "aspectFill"
+      }),
+      vue.createCommentVNode(" 返回按钮（左上角浮层） "),
+      vue.createVNode($setup["CommonBackButton"], { class: "back-btn-position" }),
+      vue.createCommentVNode(" 标题（顶部居中） "),
+      vue.createElementVNode("view", { class: "header-title" }, [
+        vue.createElementVNode("text", { class: "title-text" }, "练前热身")
+      ]),
+      vue.createCommentVNode(" 进度条（顶部下方） "),
+      vue.createElementVNode("view", { class: "progress-section" }, [
+        vue.createVNode($setup["StepBar"], {
+          totalSteps: 12,
+          currentStep: $setup.currentStep
+        }, null, 8, ["currentStep"])
+      ]),
+      vue.createCommentVNode(" AI教练气泡对话框 "),
+      vue.createElementVNode("view", { class: "coach-dialog-section" }, [
+        vue.createVNode($setup["BubbleDialogBox"], {
+          roleLabel: "Vince(艾斯)",
+          avatarUrl: $setup.coachAvatarUrl,
+          badgeBackground: "linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)",
+          text: $setup.currentWarmupTip,
+          contentBackground: "rgba(255, 255, 255, 0.85)",
+          showShadow: true
+        }, null, 8, ["text"])
+      ]),
+      vue.createCommentVNode(" 虚拟形象模拟缩略图（左下角） "),
+      vue.createElementVNode("view", { class: "virtual-character-container" }, [
+        vue.createCommentVNode(" 左上角关闭按钮 "),
+        vue.createVNode($setup["CommonCloseButton"], {
+          class: "close-btn-position",
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+          opacity: 1,
+          onClose: $setup.closeVirtualCharacter
+        }),
+        vue.createCommentVNode(" 居中标题文字 "),
+        vue.createElementVNode("text", { class: "virtual-title" }, "虚拟形象模拟"),
+        vue.createCommentVNode(" 人物图片 "),
+        vue.createElementVNode("image", {
+          class: "virtual-character-image",
+          src: _imports_1$4,
+          mode: "aspectFit"
+        })
+      ]),
+      vue.createCommentVNode(" 测试按钮：跳过热身，直接进入下一页 "),
+      $setup.SHOW_TEST_BUTTON ? (vue.openBlock(), vue.createElementBlock("view", {
+        key: 0,
+        class: "test-btn",
+        onClick: $setup.skipToNextPage
+      }, [
+        vue.createElementVNode("text", { class: "test-btn-text" }, "跳过热身")
+      ])) : vue.createCommentVNode("v-if", true)
+    ]);
+  }
+  const PagesPartTrainingWarmUpPage = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-cf52f72f"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/warm-up-page.vue"]]);
+  const _sfc_main$8 = {
+    __name: "adjust-equipment",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const __returned__ = { CommonBackButton };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "adjust-equipment-page" }, [
+      vue.createCommentVNode(" 返回按钮 "),
+      vue.createVNode($setup["CommonBackButton"], { class: "back-btn-position" }),
+      vue.createCommentVNode(" 页面标题 "),
+      vue.createElementVNode("view", { class: "header-title" }, [
+        vue.createElementVNode("text", { class: "title-text" }, "调整器械")
+      ]),
+      vue.createCommentVNode(" 占位内容 "),
+      vue.createElementVNode("view", { class: "placeholder-content" }, [
+        vue.createElementVNode("text", { class: "placeholder-text" }, "调整器械页面"),
+        vue.createElementVNode("text", { class: "placeholder-desc" }, "功能开发中...")
+      ])
+    ]);
+  }
+  const PagesPartTrainingAdjustEquipment = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-da1a4810"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/adjust-equipment.vue"]]);
   const _imports_0$2 = "/static/icons/smartAssessActivity/firstSkip/advertising_board.png";
   const _imports_1$3 = "/static/icons/smartAssessActivity/firstSkip/bg_jineng.svg";
   const _imports_2$1 = "/static/icons/smartAssessActivity/firstSkip/bg_zishi.svg";
   const _imports_3 = "/static/icons/smartAssessActivity/firstSkip/bg_liliang.svg";
-  const _sfc_main$8 = {
+  const _sfc_main$7 = {
     __name: "first-skip",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -2435,7 +2815,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createCommentVNode(" 顶部广告图 "),
       vue.createElementVNode("view", { class: "ad-banner" }, [
@@ -2495,52 +2875,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesSmartAssessFirstSkip = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-09078c8c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/smartAssess/first-skip.vue"]]);
-  const _sfc_main$7 = {
-    __name: "step-bar",
-    props: {
-      totalSteps: {
-        type: Number,
-        // 总步骤数
-        required: true
-      },
-      currentStep: {
-        type: Number,
-        // 当前步骤（从1开始计数，如currentStep=1表示第1步完成）
-        required: true
-      }
-    },
-    setup(__props, { expose: __expose }) {
-      __expose();
-      const props = __props;
-      const __returned__ = { props };
-      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-      return __returned__;
-    }
-  };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "step-bar" }, [
-      (vue.openBlock(true), vue.createElementBlock(
-        vue.Fragment,
-        null,
-        vue.renderList($props.totalSteps, (item, index) => {
-          return vue.openBlock(), vue.createElementBlock(
-            "view",
-            {
-              key: index,
-              class: vue.normalizeClass(["step-item", { "step-item-active": index < $props.currentStep }])
-            },
-            null,
-            2
-            /* CLASS */
-          );
-        }),
-        128
-        /* KEYED_FRAGMENT */
-      ))
-    ]);
-  }
-  const StepBar = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-5b9e5f0d"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/step-bar.vue"]]);
+  const PagesSmartAssessFirstSkip = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-09078c8c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/smartAssess/first-skip.vue"]]);
   const _imports_0$1 = "/static/icons/smartAssessActivity/li-liang/pop-up_elementA.png";
   const _imports_1$2 = "/static/icons/smartAssessActivity/li-liang/pop-up_elementB.png";
   const _sfc_main$6 = {
@@ -2988,7 +3323,7 @@ if (uni.restoreGlobal) {
         }, [
           vue.createElementVNode("image", {
             class: "back-icon",
-            src: _imports_0$6,
+            src: _imports_0$7,
             mode: "widthFix"
           })
         ]),
@@ -3603,7 +3938,7 @@ if (uni.restoreGlobal) {
         vue.createElementVNode("view", { class: "placeholder-container" }, [
           vue.createElementVNode("image", {
             class: "ai-icon",
-            src: _imports_0$3,
+            src: _imports_0$4,
             mode: "aspectFit"
           }),
           vue.createElementVNode("text", { class: "placeholder-title" }, "AI智能推荐"),
@@ -3618,7 +3953,9 @@ if (uni.restoreGlobal) {
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/freeTraining/free-training", PagesFreeTrainingFreeTraining);
   __definePage("pages/partTraining/part-training", PagesPartTrainingPartTraining);
-  __definePage("pages/partTraining/part-training-detail", PagesPartTrainingPartTrainingDetail);
+  __definePage("pages/partTraining/part-training-detail-adapter", PagesPartTrainingPartTrainingDetailAdapter);
+  __definePage("pages/partTraining/warm-up-page", PagesPartTrainingWarmUpPage);
+  __definePage("pages/partTraining/adjust-equipment", PagesPartTrainingAdjustEquipment);
   __definePage("pages/smartAssess/first-skip", PagesSmartAssessFirstSkip);
   __definePage("pages/smartAssess/strength-assess", PagesSmartAssessStrengthAssess);
   __definePage("pages/smartAssess/body-function-assess", PagesSmartAssessBodyFunctionAssess);
