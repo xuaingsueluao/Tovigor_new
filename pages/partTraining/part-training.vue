@@ -160,7 +160,7 @@ const handleSearchConfirm = (event) => {
 
 const handleCourseClick = (course) => {
 	uni.navigateTo({
-		url: '/pages/partTraining/part-training-detail?id=' + course.id
+		url: '/pages/partTraining/part-training-detail-adapter?id=' + course.id
 	})
 }
 

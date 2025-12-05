@@ -1,6 +1,6 @@
 <template>
 	<view class="detail-page">
-		<part-course-detail v-if="course" :course="course" />
+		<course-detail v-if="course" :course="course" />
 		<view v-else class="loading">加载中...</view>
 	</view>
 </template>
@@ -8,7 +8,7 @@
 <script setup>
 import { ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
-import PartCourseDetail from './components/part-course-detail.vue'
+import CourseDetail from './components/course-detail.vue'
 
 const course = ref(null)
 
