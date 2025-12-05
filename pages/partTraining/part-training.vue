@@ -35,7 +35,7 @@
 				<!-- 课程列表 -->
 				<scroll-view
 					class="course-scroll"
-					scroll-y
+					scroll-y="true"
 					:show-scrollbar="false"
 				>
 					<view class="course-grid">
@@ -159,9 +159,8 @@ const handleSearchConfirm = (event) => {
 }
 
 const handleCourseClick = (course) => {
-	uni.showToast({
-		title: `进入 ${course.title}`,
-		icon: 'none'
+	uni.navigateTo({
+		url: '/pages/partTraining/part-training-detail?id=' + course.id
 	})
 }
 
@@ -187,12 +186,12 @@ const handleFilterChange = (data) => {
 
 <style scoped lang="scss">
 .page {
-	height: 100vh !important;
+	height: 100vh ;
 	background-color: #F5F5F5;
 	display: flex;
 	flex-direction: column;
 	padding: 4rpx 16rpx 0;
-	overflow: hidden !important;
+	overflow: hidden ;
 }
 
 .header {
@@ -201,7 +200,7 @@ const handleFilterChange = (data) => {
 	align-items: center;
 	justify-content: center;
 	height: 96rpx;
-	flex-shrink: 0;
+	flex-shrink: 0;  // 头部固定高
 }
 
 .back-btn-position {
@@ -220,10 +219,9 @@ const handleFilterChange = (data) => {
 .content {
 	display: flex;
 	flex-direction: row;
-	flex: 1;
+	flex: 1;   // 填满 header 下方所有空间
 	gap: 14rpx;
-	min-height: 0;
-	margin-top: 16rpx;
+	overflow: hidden; // 建议加上，避免横向多余滚动
 }
 
 .sidebar {
@@ -235,7 +233,7 @@ const handleFilterChange = (data) => {
 	display: flex;
 	flex-direction: column;
 	gap: 16rpx;
-	min-height: 0;
+	min-height: 0;  // 关键：允许内部 flex 子项正确分配高度
 }
 
 .search-bar {
@@ -280,10 +278,11 @@ const handleFilterChange = (data) => {
 }
 
 .course-scroll {
-	flex: 1;
-	min-height: 0;
-	background: transparent;
+  flex: 1;           // 占满 main-column 剩余空间
+  min-height: 0;     // 允许缩小，否则有些平台会撑破
+  background: transparent;
 }
+
 
 .course-grid {
 	display: flex;
@@ -301,9 +300,9 @@ const handleFilterChange = (data) => {
 <style>
 /* 强制禁止页面滚动 - 全局样式 */
 page {
-	height: 100% !important;
-	overflow: hidden !important;
-	position: fixed !important;
-	width: 100% !important;
+	height: 100% ;
+	overflow: hidden !;
+	position: fixed ;
+	width: 100% ;
 }
 </style>

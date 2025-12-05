@@ -44,11 +44,11 @@ const handleClick = () => {
 	justify-content: center;
 	border-radius: 50%;
 	background: transparent;
-	transition: transform 0.2s ease, opacity 0.2s ease;
+	cursor: pointer;
+	user-select: none;
 }
 
 .back-btn:active {
-	transform: scale(0.97);
 	opacity: 0.7;
 }
 
@@ -56,5 +56,6 @@ const handleClick = () => {
 	width: 38rpx;
 	height: auto;
 	display: block;
+	pointer-events: none;
 }
 </style>

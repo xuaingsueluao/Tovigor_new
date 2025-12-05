@@ -1,0 +1,434 @@
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+.back-btn[data-v-050e9f87] {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.back-btn[data-v-050e9f87]:active {
+  opacity: 0.7;
+}
+.back-icon[data-v-050e9f87] {
+  width: 1.1875rem;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.filter-pill[data-v-2ff79513] {
+  height: 2.125rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(229, 229, 229, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+.filter-pill--active[data-v-2ff79513] {
+  background: rgba(101, 177, 254, 0.15);
+}
+.label[data-v-2ff79513] {
+  font-size: 0.75rem;
+  color: #333333;
+  font-weight: 500;
+}
+.right-wrap[data-v-2ff79513] {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+.value[data-v-2ff79513] {
+  font-size: 0.6875rem;
+  color: #888888;
+  margin-right: 0.25rem;
+}
+
+/* 简单的下拉小箭头 */
+.arrow-icon[data-v-2ff79513] {
+  width: 0;
+  height: 0;
+  border-left: 0.25rem solid transparent;
+  border-right: 0.25rem solid transparent;
+  border-top: 0.3125rem solid #bbbbbb;
+}
+
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+.sidebar[data-v-ebd14bbd] {
+  width: 5.625rem;
+  padding: 0 0.375rem 0.5rem;
+  border-radius: 0.75rem;
+  background-color: #F3F4F6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== 顶部 AI 推荐块 ========== */
+.ai-header[data-v-ebd14bbd] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+.ai-recommend-btn[data-v-ebd14bbd] {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  background: #65b1fe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  position: relative;
+  padding: 0 0.375rem;
+}
+.ai-avatar[data-v-ebd14bbd] {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+.ai-text[data-v-ebd14bbd] {
+  font-size: 0.6875rem;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0.03125rem;
+}
+
+/* ========== 筛选列表 ========== */
+.filter-scroll[data-v-ebd14bbd] {
+  flex: 1;
+  max-height: 28.125rem;
+}
+.filter-list[data-v-ebd14bbd] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+/* 筛选标题 */
+.filter-title[data-v-ebd14bbd] {
+  height: 2.125rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(200, 200, 200, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter-title-text[data-v-ebd14bbd] {
+  font-size: 0.75rem;
+  color: #666666;
+  font-weight: 600;
+}
+
+/* ========== 展开选项区域 ========== */
+.filter-options[data-v-ebd14bbd] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem 0;
+}
+.option-chip[data-v-ebd14bbd] {
+  height: 1.75rem;
+  padding: 0 0.5rem;
+  border-radius: 0.375rem;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border: 0.0625rem solid transparent;
+}
+.option-chip--active[data-v-ebd14bbd] {
+  background: #00C853;
+  border-color: #00C853;
+}
+.option-text[data-v-ebd14bbd] {
+  font-size: 0.6875rem;
+  color: #333333;
+}
+.option-chip--active .option-text[data-v-ebd14bbd] {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* ========== AI 教练卡片 ========== */
+.coach-options[data-v-ebd14bbd] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 0.25rem 0;
+}
+.coach-card[data-v-ebd14bbd] {
+  min-height: 2.25rem;
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+  background: #1E3A8A;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.375rem;
+  transition: all 0.2s ease;
+  border: 0.09375rem solid transparent;
+}
+.coach-card--active[data-v-ebd14bbd] {
+  border-color: #00C853;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 200, 83, 0.3);
+}
+.coach-avatar[data-v-ebd14bbd] {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+.coach-name[data-v-ebd14bbd] {
+  flex: 1;
+  font-size: 0.6875rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.course-card[data-v-cf2e1a6c] {
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.06);
+}
+
+/* 封面 */
+.cover-wrap[data-v-cf2e1a6c] {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 4:3 比例，可按设计改 */
+  overflow: hidden;
+}
+.cover-img[data-v-cf2e1a6c] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 播放按钮 */
+.play-btn[data-v-cf2e1a6c] {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  background: rgba(255, 255, 255, 0.3); /* 毛玻璃效果背景 */
+  -webkit-backdrop-filter: blur(0.3125rem);
+          backdrop-filter: blur(0.3125rem);  /* 模糊效果 */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.5);  /* 半透明边框 */
+}
+/* background-color: rgba(0, 0, 0, 0.65); 黑色半透明 */
+.play-icon-triangle[data-v-cf2e1a6c] {
+  width: 0;
+  height: 0;
+  border-top: 0.3125rem solid transparent;
+  border-bottom: 0.3125rem solid transparent;
+  border-left: 0.5rem solid #ffffff;
+  margin-left: 0.125rem; /* 让三角形略微居中 */
+}
+
+/* 信息区域 */
+.info[data-v-cf2e1a6c] {
+  padding: 0.3125rem 0.375rem 0.125rem;
+}
+.title-row[data-v-cf2e1a6c] {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: -0.3125rem;
+}
+.title[data-v-cf2e1a6c] {
+  flex: 1;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #ff5858;
+  margin-right: 0.3125rem;
+  line-height: 1.1;
+}
+.duration[data-v-cf2e1a6c] {
+  font-size: 0.5625rem;
+  color: #35b854;
+  line-height: 1.1;
+}
+
+/* 标签行 */
+.tag-row[data-v-cf2e1a6c] {
+  margin-top: 0;
+  padding: 0;
+}
+.tag-text[data-v-cf2e1a6c] {
+  font-size: 0.4375rem; 
+  color: #999999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.1;
+}
+
+/* 颜色变量 */
+/* 自定义颜色 */
+/* 柔和的橙色 */
+/* 浅湖绿/蓝绿 */
+/* 浅灰白背景 */
+/* 深灰色 */
+/* 牛奶白 */
+/* 95%透明 */
+/* 翠绿色 */
+/* 深蓝色 - AI教练卡片背景 */
+/* 中性蓝色 - 稍浅 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 字体颜色 */
+/* 字体大小 */
+.page[data-v-342360d0] {
+  height: 100vh;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  padding: 0.125rem 0.5rem 0;
+  overflow: hidden;
+}
+.header[data-v-342360d0] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  flex-shrink: 0;
+}
+.back-btn-position[data-v-342360d0] {
+  position: absolute;
+  left: 0.65625rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-title[data-v-342360d0] {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #333333;
+}
+.content[data-v-342360d0] {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 0.4375rem;
+  overflow: hidden;
+}
+.sidebar[data-v-342360d0] {
+  flex-shrink: 0;
+}
+.main-column[data-v-342360d0] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 0;
+}
+.search-bar[data-v-342360d0] {
+  flex-shrink: 0;
+}
+.search-box[data-v-342360d0] {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 1.25rem;
+  padding: 0 0.75rem;
+  box-shadow: 0 0.1875rem 0.5625rem rgba(0, 0, 0, 0.08);
+  height: 2.5rem;
+}
+.search-icon[data-v-342360d0] {
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  border: 0.125rem solid #B0B0B0;
+  position: relative;
+}
+.search-icon[data-v-342360d0]::after {
+  content: "";
+  position: absolute;
+  width: 0.4375rem;
+  height: 0.125rem;
+  background: #B0B0B0;
+  border-radius: 0.0625rem;
+  bottom: -0.25rem;
+  right: -0.125rem;
+  transform: rotate(45deg);
+}
+.search-input[data-v-342360d0] {
+  flex: 1;
+  margin-left: 0.5rem;
+  font-size: 0.8125rem;
+  color: #333333;
+}
+.course-scroll[data-v-342360d0] {
+  flex: 1;
+  min-height: 0;
+  background: transparent;
+}
+.course-grid[data-v-342360d0] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 0.75rem;
+  padding-bottom: 1.25rem;
+}
+.course-item[data-v-342360d0] {
+  width: calc(50% - 0.375rem);
+}
+
+/* 强制禁止页面滚动 - 全局样式 */
+body {
+	height: 100% ;
+	overflow: hidden !;
+	position: fixed ;
+	width: 100% ;
+}

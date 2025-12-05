@@ -19,11 +19,22 @@
 		{
 			"path": "pages/freeTraining/free-training",
 			"style": {
-				"navigationBarTitleText": "自由训练"
+				"navigationBarTitleText": "自由训练",
+				"disableScroll": true,
+				"bounce": "none"
 			}
 		},
 		{
 			"path": "pages/partTraining/part-training",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true,  
+				"bounce": "none"
+			}
+		},
+		{
+			"path": "pages/partTraining/part-training-detail",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom",
@@ -34,7 +45,9 @@
 		{
 			"path": "pages/smartAssess/first-skip",
 			"style": {
-				"navigationBarTitleText": "智能评估"
+				"navigationBarTitleText": "智能评估",
+				"disableScroll": true,
+				"bounce": "none"
 			}
 		},
 		{
