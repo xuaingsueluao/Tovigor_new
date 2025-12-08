@@ -185,12 +185,21 @@
 
 			</view>
 		</scroll-view>
+		
+		<!-- AI教练详情弹窗 -->
+		<CoachDetailModal
+			v-model:show="showCoachModal"
+			:coachData="currentCoachData"
+			@select="handleCoachSelect"
+		/>
 	</view>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import FilterPill from '@/components/ui-box/filter-pill.vue'
+import CoachDetailModal from '@/components/modals/coach-detail-modal.vue'
+import { getCoachByValue, getSelectedCoach, setSelectedCoach } from '@/utils/coachManager.js'
 
 // Props
 const props = defineProps({
@@ -212,6 +221,10 @@ const props = defineProps({
 
 // Emits - 简化为只需要 changeFilter 事件
 const emits = defineEmits(['changeFilter'])
+
+// 教练详情弹窗状态
+const showCoachModal = ref(false)
+const currentCoachData = ref(null)
 
 // 展开状态
 const expanded = ref({
@@ -299,6 +312,12 @@ const toggleSection = (key) => {
 
 // 选项点击
 const onOptionClick = (groupKey, option) => {
+	// 如果是教练选项，弹出详情弹窗而非直接选中
+	if (groupKey === 'coach') {
+		openCoachDetail(option)
+		return
+	}
+	
 	const currentValues = props.filters[groupKey] || []
 	let newValues = []
 	
@@ -340,6 +359,58 @@ const goToAIRecommend = () => {
 		url: '/pages/partTraining/components/ai-recommend'
 	})
 }
+
+// ========== AI教练详情弹窗相关方法 ==========
+// 打开教练详情弹窗
+const openCoachDetail = (coachOption) => {
+	// 获取完整的教练信息
+	const fullCoachData = getCoachByValue(coachOption.value)
+	if (fullCoachData) {
+		currentCoachData.value = fullCoachData
+		showCoachModal.value = true
+	}
+}
+
+// 处理教练选择
+const handleCoachSelect = (coachData) => {
+	// 保存到本地存储
+	setSelectedCoach(coachData.value)
+	
+	// 更新筛选状态（单选，替换为当前选中的教练）
+	emits('changeFilter', {
+		key: 'coach',
+		values: [coachData.value],
+		option: {
+			value: coachData.value,
+			label: coachData.fullName,
+			avatar: coachData.avatar
+		}
+	})
+	
+	// 显示成功提示
+	uni.showToast({
+		title: `已选择${coachData.label}`,
+		icon: 'success',
+		duration: 1500
+	})
+}
+
+// 页面加载时，从本地存储恢复已选教练
+onMounted(() => {
+	const selectedCoach = getSelectedCoach()
+	if (selectedCoach) {
+		// 如果有已选教练，同步到筛选状态
+		emits('changeFilter', {
+			key: 'coach',
+			values: [selectedCoach.value],
+			option: {
+				value: selectedCoach.value,
+				label: selectedCoach.fullName,
+				avatar: selectedCoach.avatar
+			}
+		})
+	}
+})
 </script>
 
 <style scoped lang="scss">

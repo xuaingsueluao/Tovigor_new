@@ -31,7 +31,7 @@ if (uni.restoreGlobal) {
 }
 (function(vue) {
   "use strict";
-  const _imports_0$9 = "/static/icons/ads/idle.mp4";
+  const _imports_0$8 = "/static/icons/ads/idle.mp4";
   const _export_sfc = (sfc, props) => {
     const target = sfc.__vccOpts || sfc;
     for (const [key, val] of props) {
@@ -69,7 +69,7 @@ if (uni.restoreGlobal) {
           [
             vue.createElementVNode("video", {
               class: "bg-video",
-              src: _imports_0$9,
+              src: _imports_0$8,
               autoplay: "",
               loop: "",
               muted: "",
@@ -224,7 +224,7 @@ if (uni.restoreGlobal) {
     )) : vue.createCommentVNode("v-if", true);
   }
   const ModalContainer = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-2f7b8f3c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/modals/modal-container.vue"]]);
-  const _imports_0$8 = "/static/icons/general/btn_general_close.svg";
+  const _imports_1$6 = "/static/icons/general/btn_general_close.svg";
   const _imports_0$7 = "/static/icons/smartAssessActivity/li-liang/btn_back.svg";
   const _sfc_main$m = {
     __name: "usage-guide-modal",
@@ -313,7 +313,7 @@ if (uni.restoreGlobal) {
             }, [
               vue.createElementVNode("image", {
                 class: "close-icon",
-                src: _imports_0$8,
+                src: _imports_1$6,
                 mode: "aspectFit"
               })
             ])
@@ -378,7 +378,7 @@ if (uni.restoreGlobal) {
                 }, [
                   vue.createElementVNode("image", {
                     class: "close-icon",
-                    src: _imports_0$8,
+                    src: _imports_1$6,
                     mode: "aspectFit"
                   })
                 ])
@@ -423,8 +423,8 @@ if (uni.restoreGlobal) {
   }
   const UsageGuideModal = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__scopeId", "data-v-cda377bd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/modals/usage-guide-modal.vue"]]);
   const _imports_0$6 = "/static/icons/homeActivity/btn_usage_guide.svg";
-  const _imports_1$6 = "/static/icons/homeActivity/bg_free_training.svg";
-  const _imports_2$3 = "/static/icons/homeActivity/bg_body_training.svg";
+  const _imports_1$5 = "/static/icons/homeActivity/bg_free_training.svg";
+  const _imports_2$4 = "/static/icons/homeActivity/bg_body_training.svg";
   const _imports_3$2 = "/static/icons/homeActivity/bg_smart_assess.svg";
   const _imports_4$1 = "/static/icons/homeActivity/ic_games.svg";
   const _imports_5$1 = "/static/icons/homeActivity/trimming.png";
@@ -558,7 +558,7 @@ if (uni.restoreGlobal) {
           vue.createElementVNode("view", { class: "card card-large card-free" }, [
             vue.createElementVNode("image", {
               class: "card-bg-img",
-              src: _imports_1$6,
+              src: _imports_1$5,
               mode: "aspectFill"
             }),
             vue.createElementVNode("view", { class: "card-content" }, [
@@ -576,7 +576,7 @@ if (uni.restoreGlobal) {
           }, [
             vue.createElementVNode("image", {
               class: "card-bg-img",
-              src: _imports_2$3,
+              src: _imports_2$4,
               mode: "aspectFill"
             }),
             vue.createElementVNode("view", { class: "card-content" }, [
@@ -735,8 +735,8 @@ if (uni.restoreGlobal) {
     /* HookFlags.PAGE */
   );
   const _imports_0$5 = "/static/icons/freeTrainingActivity/bg_statBoard.png";
-  const _imports_1$5 = "/static/icons/freeTrainingActivity/ic_counts.png";
-  const _imports_2$2 = "/static/icons/freeTrainingActivity/ic_separate.png";
+  const _imports_1$4 = "/static/icons/freeTrainingActivity/ic_counts.png";
+  const _imports_2$3 = "/static/icons/freeTrainingActivity/ic_separate.png";
   const _imports_3$1 = "/static/icons/freeTrainingActivity/ic_train_time.png";
   const _imports_4 = "/static/icons/freeTrainingActivity/ic_calories.png";
   const _imports_5 = "/static/icons/freeTrainingActivity/ic_resistance_adjust.svg";
@@ -955,7 +955,7 @@ if (uni.restoreGlobal) {
             vue.createElementVNode("view", { class: "stat-item" }, [
               vue.createElementVNode("image", {
                 class: "stat-icon",
-                src: _imports_1$5,
+                src: _imports_1$4,
                 mode: "aspectFit"
               }),
               vue.createElementVNode("view", { class: "stat-content" }, [
@@ -971,7 +971,7 @@ if (uni.restoreGlobal) {
             ]),
             vue.createElementVNode("image", {
               class: "separator",
-              src: _imports_2$2,
+              src: _imports_2$3,
               mode: "aspectFit"
             }),
             vue.createCommentVNode(" 训练时间 "),
@@ -994,7 +994,7 @@ if (uni.restoreGlobal) {
             ]),
             vue.createElementVNode("image", {
               class: "separator",
-              src: _imports_2$2,
+              src: _imports_2$3,
               mode: "aspectFit"
             }),
             vue.createCommentVNode(" 单量/千卡 "),
@@ -1286,8 +1286,204 @@ if (uni.restoreGlobal) {
     );
   }
   const FilterPill = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-2ff79513"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/filter-pill.vue"]]);
-  const _imports_0$4 = "/static/icons/partTrainingActivity/AI_coach_Vince.png";
   const _sfc_main$h = {
+    __name: "coach-detail-modal",
+    props: {
+      // 是否显示弹窗
+      show: {
+        type: Boolean,
+        default: false
+      },
+      // 教练数据
+      coachData: {
+        type: Object,
+        default: () => ({
+          value: "",
+          label: "",
+          englishName: "",
+          avatar: "",
+          intro: "",
+          tags: []
+        })
+      }
+    },
+    emits: ["update:show", "select"],
+    setup(__props, { expose: __expose, emit: __emit }) {
+      __expose();
+      const props = __props;
+      const emits = __emit;
+      const handleClose = () => {
+        emits("update:show", false);
+      };
+      const handleMaskClick = () => {
+        handleClose();
+      };
+      const handleSelect = () => {
+        emits("select", props.coachData);
+        handleClose();
+      };
+      const __returned__ = { props, emits, handleClose, handleMaskClick, handleSelect, computed: vue.computed };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+    return $props.show ? (vue.openBlock(), vue.createElementBlock("view", {
+      key: 0,
+      class: "modal-mask",
+      onClick: vue.withModifiers($setup.handleMaskClick, ["self"])
+    }, [
+      vue.createElementVNode("view", { class: "modal-container" }, [
+        vue.createCommentVNode(" 关闭按钮 "),
+        vue.createElementVNode("image", {
+          class: "close-btn",
+          src: _imports_1$6,
+          mode: "aspectFit",
+          onClick: $setup.handleClose
+        }),
+        vue.createCommentVNode(" 教练头像 "),
+        vue.createElementVNode("view", { class: "coach-avatar-section" }, [
+          vue.createElementVNode("image", {
+            class: "coach-avatar-large",
+            src: $props.coachData.avatar,
+            mode: "aspectFit"
+          }, null, 8, ["src"])
+        ]),
+        vue.createCommentVNode(" 教练信息 "),
+        vue.createElementVNode("view", { class: "coach-info-section" }, [
+          vue.createCommentVNode(" 教练姓名 "),
+          vue.createElementVNode(
+            "text",
+            { class: "coach-name" },
+            vue.toDisplayString($props.coachData.label),
+            1
+            /* TEXT */
+          ),
+          vue.createCommentVNode(" 教练英文名 "),
+          vue.createElementVNode(
+            "text",
+            { class: "coach-english-name" },
+            vue.toDisplayString($props.coachData.englishName),
+            1
+            /* TEXT */
+          ),
+          vue.createCommentVNode(" 教练简介 "),
+          vue.createElementVNode(
+            "text",
+            { class: "coach-intro" },
+            vue.toDisplayString($props.coachData.intro),
+            1
+            /* TEXT */
+          ),
+          vue.createCommentVNode(" 教练特长标签 "),
+          vue.createElementVNode("view", { class: "coach-tags" }, [
+            (vue.openBlock(true), vue.createElementBlock(
+              vue.Fragment,
+              null,
+              vue.renderList($props.coachData.tags, (tag, index) => {
+                return vue.openBlock(), vue.createElementBlock("view", {
+                  key: index,
+                  class: "tag-chip"
+                }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "tag-text" },
+                    vue.toDisplayString(tag),
+                    1
+                    /* TEXT */
+                  )
+                ]);
+              }),
+              128
+              /* KEYED_FRAGMENT */
+            ))
+          ])
+        ]),
+        vue.createCommentVNode(" 选择按钮 "),
+        vue.createElementVNode("view", {
+          class: "select-btn",
+          onClick: $setup.handleSelect
+        }, [
+          vue.createElementVNode(
+            "text",
+            { class: "select-btn-text" },
+            "选择" + vue.toDisplayString($props.coachData.label),
+            1
+            /* TEXT */
+          )
+        ])
+      ])
+    ])) : vue.createCommentVNode("v-if", true);
+  }
+  const CoachDetailModal = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-22059da9"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/modals/coach-detail-modal.vue"]]);
+  const STORAGE_KEY = "selected_coach";
+  const DEFAULT_COACHES = {
+    vince: {
+      value: "vince",
+      label: "Vince",
+      fullName: "Vince 艾斯",
+      englishName: "Vince Anderson",
+      avatar: "/static/icons/partTrainingActivity/AI_coach_Vince.png",
+      intro: "专业严谨型教练，擅长帮助学员突破力量瓶颈，打造强健体魄。",
+      tags: ["力量训练", "体能提升", "运动康复"],
+      gender: "male",
+      badgeBackground: "linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)"
+    },
+    vera: {
+      value: "vera",
+      label: "Vera",
+      fullName: "Vera 维拉",
+      englishName: "Vera Williams",
+      avatar: "/static/icons/partTrainingActivity/AI_coach_Vera.png",
+      intro: "活力鼓励型教练，深入了解女性力量训练痛点，传递热情与能量。",
+      tags: ["塑形训练", "柔韧拉伸", "体态矫正"],
+      gender: "female",
+      badgeBackground: "linear-gradient(135deg, #F093FB 0%, #F5576C 100%)"
+    }
+  };
+  function getCoachByValue(coachValue) {
+    return DEFAULT_COACHES[coachValue] || null;
+  }
+  function getSelectedCoach() {
+    try {
+      const storedValue = uni.getStorageSync(STORAGE_KEY);
+      if (storedValue && DEFAULT_COACHES[storedValue]) {
+        return DEFAULT_COACHES[storedValue];
+      }
+      return DEFAULT_COACHES.vince;
+    } catch (e) {
+      formatAppLog("error", "at utils/coachManager.js:65", "获取选中教练失败:", e);
+      return DEFAULT_COACHES.vince;
+    }
+  }
+  function setSelectedCoach(coachValue) {
+    try {
+      if (!DEFAULT_COACHES[coachValue]) {
+        formatAppLog("error", "at utils/coachManager.js:78", "无效的教练标识:", coachValue);
+        return false;
+      }
+      uni.setStorageSync(STORAGE_KEY, coachValue);
+      formatAppLog("log", "at utils/coachManager.js:82", "已选择教练:", coachValue);
+      return true;
+    } catch (e) {
+      formatAppLog("error", "at utils/coachManager.js:85", "保存选中教练失败:", e);
+      return false;
+    }
+  }
+  function getCoachDetailInfo(coachValue) {
+    const coach = DEFAULT_COACHES[coachValue];
+    if (!coach) {
+      return null;
+    }
+    return {
+      ...coach,
+      // 为 BubbleDialogBox 组件准备的属性
+      roleLabel: coach.fullName,
+      avatarUrl: coach.avatar
+    };
+  }
+  const _imports_0$4 = "/static/icons/partTrainingActivity/AI_coach_Vince.png";
+  const _sfc_main$g = {
     __name: "training-filter-sidebar",
     props: {
       // 由父组件传入当前筛选状态
@@ -1310,6 +1506,8 @@ if (uni.restoreGlobal) {
       __expose();
       const props = __props;
       const emits = __emit;
+      const showCoachModal = vue.ref(false);
+      const currentCoachData = vue.ref(null);
       const expanded = vue.ref({
         gender: false,
         goal: false,
@@ -1382,6 +1580,10 @@ if (uni.restoreGlobal) {
         expanded.value[key] = !expanded.value[key];
       };
       const onOptionClick = (groupKey, option) => {
+        if (groupKey === "coach") {
+          openCoachDetail(option);
+          return;
+        }
         const currentValues = props.filters[groupKey] || [];
         let newValues = [];
         if (currentValues.includes(option.value)) {
@@ -1410,12 +1612,56 @@ if (uni.restoreGlobal) {
           url: "/pages/partTraining/components/ai-recommend"
         });
       };
-      const __returned__ = { props, emits, expanded, genderOptions, goalOptions, levelOptions, partOptions, methodOptions, durationOptions, equipmentOptions, coachOptions, toggleSection, onOptionClick, isOptionActive, getSelectedLabels, goToAIRecommend, ref: vue.ref, FilterPill };
+      const openCoachDetail = (coachOption) => {
+        const fullCoachData = getCoachByValue(coachOption.value);
+        if (fullCoachData) {
+          currentCoachData.value = fullCoachData;
+          showCoachModal.value = true;
+        }
+      };
+      const handleCoachSelect = (coachData) => {
+        setSelectedCoach(coachData.value);
+        emits("changeFilter", {
+          key: "coach",
+          values: [coachData.value],
+          option: {
+            value: coachData.value,
+            label: coachData.fullName,
+            avatar: coachData.avatar
+          }
+        });
+        uni.showToast({
+          title: `已选择${coachData.label}`,
+          icon: "success",
+          duration: 1500
+        });
+      };
+      vue.onMounted(() => {
+        const selectedCoach = getSelectedCoach();
+        if (selectedCoach) {
+          emits("changeFilter", {
+            key: "coach",
+            values: [selectedCoach.value],
+            option: {
+              value: selectedCoach.value,
+              label: selectedCoach.fullName,
+              avatar: selectedCoach.avatar
+            }
+          });
+        }
+      });
+      const __returned__ = { props, emits, showCoachModal, currentCoachData, expanded, genderOptions, goalOptions, levelOptions, partOptions, methodOptions, durationOptions, equipmentOptions, coachOptions, toggleSection, onOptionClick, isOptionActive, getSelectedLabels, goToAIRecommend, openCoachDetail, handleCoachSelect, ref: vue.ref, onMounted: vue.onMounted, FilterPill, CoachDetailModal, get getCoachByValue() {
+        return getCoachByValue;
+      }, get getSelectedCoach() {
+        return getSelectedCoach;
+      }, get setSelectedCoach() {
+        return setSelectedCoach;
+      } };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "sidebar" }, [
       vue.createCommentVNode(" 顶部 AI 推荐头像块 "),
       vue.createElementVNode("view", { class: "ai-header" }, [
@@ -1712,11 +1958,18 @@ if (uni.restoreGlobal) {
             ))
           ])) : vue.createCommentVNode("v-if", true)
         ])
-      ])
+      ]),
+      vue.createCommentVNode(" AI教练详情弹窗 "),
+      vue.createVNode($setup["CoachDetailModal"], {
+        show: $setup.showCoachModal,
+        "onUpdate:show": _cache[8] || (_cache[8] = ($event) => $setup.showCoachModal = $event),
+        coachData: $setup.currentCoachData,
+        onSelect: $setup.handleCoachSelect
+      }, null, 8, ["show", "coachData"])
     ]);
   }
-  const TrainingFilterSidebar = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-ebd14bbd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/training-filter-sidebar.vue"]]);
-  const _sfc_main$g = {
+  const TrainingFilterSidebar = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-ebd14bbd"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/training-filter-sidebar.vue"]]);
+  const _sfc_main$f = {
     __name: "training-course-card",
     props: {
       course: {
@@ -1754,7 +2007,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", {
       class: "course-card",
       onClick: $setup.handleClick
@@ -1811,8 +2064,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const TrainingCourseCard = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-cf2e1a6c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/course-list/training-course-card.vue"]]);
-  const _sfc_main$f = {
+  const TrainingCourseCard = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-cf2e1a6c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/course-list/training-course-card.vue"]]);
+  const _sfc_main$e = {
     __name: "part-training",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -1930,7 +2183,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "page" }, [
       vue.createCommentVNode(" 顶部导航 "),
       vue.createElementVNode("view", { class: "header" }, [
@@ -1998,8 +2251,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesPartTrainingPartTraining = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-342360d0"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training.vue"]]);
-  const _sfc_main$e = {
+  const PagesPartTrainingPartTraining = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-342360d0"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training.vue"]]);
+  const _sfc_main$d = {
     __name: "course-detail",
     props: {
       course: {
@@ -2021,7 +2274,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "course-detail" }, [
       vue.createCommentVNode(" 顶部导航栏 "),
       vue.createElementVNode("view", { class: "header" }, [
@@ -2181,8 +2434,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const CourseDetail = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-f6bfaf64"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/course-detail.vue"]]);
-  const _sfc_main$d = {
+  const CourseDetail = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-f6bfaf64"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/components/course-detail.vue"]]);
+  const _sfc_main$c = {
     __name: "part-training-detail-adapter",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -2399,7 +2652,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "detail-page" }, [
       $setup.course ? (vue.openBlock(), vue.createBlock($setup["CourseDetail"], {
         key: 0,
@@ -2410,65 +2663,7 @@ if (uni.restoreGlobal) {
       }, "加载中..."))
     ]);
   }
-  const PagesPartTrainingPartTrainingDetailAdapter = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-d35381b9"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training-detail-adapter.vue"]]);
-  const _sfc_main$c = {
-    __name: "common-close-button",
-    props: {
-      // 背景色（支持 rgba）
-      backgroundColor: {
-        type: String,
-        default: "rgba(0, 0, 0, 0.3)"
-      },
-      // 整体透明度（0-1）
-      opacity: {
-        type: Number,
-        default: 1
-      },
-      // 是否使用默认关闭行为（触发父组件隐藏逻辑）
-      useDefault: {
-        type: Boolean,
-        default: true
-      }
-    },
-    emits: ["click", "close"],
-    setup(__props, { expose: __expose, emit: __emit }) {
-      __expose();
-      const props = __props;
-      const emits = __emit;
-      const handleClick = () => {
-        emits("click");
-        if (props.useDefault) {
-          emits("close");
-        }
-      };
-      const __returned__ = { props, emits, handleClick };
-      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-      return __returned__;
-    }
-  };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock(
-      "view",
-      {
-        class: "close-btn",
-        style: vue.normalizeStyle({
-          backgroundColor: $props.backgroundColor,
-          opacity: $props.opacity
-        }),
-        onClick: $setup.handleClick
-      },
-      [
-        vue.createCommentVNode(" X 图标：使用两条交叉的线绘制 "),
-        vue.createElementVNode("view", { class: "close-icon" }, [
-          vue.createElementVNode("view", { class: "close-line close-line-1" }),
-          vue.createElementVNode("view", { class: "close-line close-line-2" })
-        ])
-      ],
-      4
-      /* STYLE */
-    );
-  }
-  const CommonCloseButton = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-4254237c"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/common-close-button.vue"]]);
+  const PagesPartTrainingPartTrainingDetailAdapter = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-d35381b9"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/pages/partTraining/part-training-detail-adapter.vue"]]);
   const _sfc_main$b = {
     __name: "step-bar",
     props: {
@@ -2620,14 +2815,26 @@ if (uni.restoreGlobal) {
   }
   const BubbleDialogBox = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-fb4bd76e"], ["__file", "C:/wzl/HX-proj/tovigor_v1/tovigor_v1/components/ui-box/bubble-dialog-box.vue"]]);
   const _imports_0$3 = "/static/icons/partTrainingActivity/startTraining/trainingActivity_placeHolder.webp";
-  const _imports_1$4 = "/static/icons/partTrainingActivity/startTraining/virtual-character.png";
+  const _imports_2$2 = "/static/icons/partTrainingActivity/startTraining/virtual-character.png";
   const STEP_INTERVAL_MS = 3e4;
-  const coachAvatarUrl = "/static/icons/partTrainingActivity/AI_coach_Vince.png";
   const _sfc_main$9 = {
     __name: "warm-up-page",
     setup(__props, { expose: __expose }) {
       __expose();
       const SHOW_TEST_BUTTON2 = vue.ref(true);
+      const selectedCoach = vue.ref(null);
+      const coachRoleLabel = vue.computed(() => {
+        var _a;
+        return ((_a = selectedCoach.value) == null ? void 0 : _a.fullName) || "Vince 艾斯";
+      });
+      const coachAvatarUrl = vue.computed(() => {
+        var _a;
+        return ((_a = selectedCoach.value) == null ? void 0 : _a.avatar) || "/static/icons/partTrainingActivity/AI_coach_Vince.png";
+      });
+      const coachBadgeBackground = vue.computed(() => {
+        var _a;
+        return ((_a = selectedCoach.value) == null ? void 0 : _a.badgeBackground) || "linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)";
+      });
       const warmupTips = [
         "1. 上半身保持竖直，膝盖不要弯曲",
         "2. 双手自然下垂，放松肩部肌肉",
@@ -2643,6 +2850,8 @@ if (uni.restoreGlobal) {
         return warmupTips[stageIndex] || warmupTips[0];
       });
       vue.onMounted(() => {
+        selectedCoach.value = getSelectedCoach();
+        formatAppLog("log", "at pages/partTraining/warm-up-page.vue:113", "当前选中的教练:", selectedCoach.value);
         startProgressTimer();
       });
       onShow(() => {
@@ -2683,19 +2892,23 @@ if (uni.restoreGlobal) {
         navigateToNextPage();
       };
       const closeVirtualCharacter = () => {
-        formatAppLog("log", "at pages/partTraining/warm-up-page.vue:166", "关闭虚拟形象模拟");
+        formatAppLog("log", "at pages/partTraining/warm-up-page.vue:173", "关闭虚拟形象模拟");
         uni.showToast({
           title: "功能开发中",
           icon: "none"
         });
       };
-      const __returned__ = { SHOW_TEST_BUTTON: SHOW_TEST_BUTTON2, STEP_INTERVAL_MS, coachAvatarUrl, warmupTips, currentStep, get progressTimer() {
+      const __returned__ = { SHOW_TEST_BUTTON: SHOW_TEST_BUTTON2, STEP_INTERVAL_MS, selectedCoach, coachRoleLabel, coachAvatarUrl, coachBadgeBackground, warmupTips, currentStep, get progressTimer() {
         return progressTimer;
       }, set progressTimer(v) {
         progressTimer = v;
       }, currentWarmupTip, startProgressTimer, clearProgressTimer, resetProgress, navigateToNextPage, skipToNextPage, closeVirtualCharacter, ref: vue.ref, computed: vue.computed, onMounted: vue.onMounted, onBeforeUnmount: vue.onBeforeUnmount, get onShow() {
         return onShow;
-      }, CommonBackButton, CommonCloseButton, StepBar, BubbleDialogBox };
+      }, CommonBackButton, StepBar, BubbleDialogBox, get getSelectedCoach() {
+        return getSelectedCoach;
+      }, get getCoachDetailInfo() {
+        return getCoachDetailInfo;
+      } };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -2724,29 +2937,29 @@ if (uni.restoreGlobal) {
       vue.createCommentVNode(" AI教练气泡对话框 "),
       vue.createElementVNode("view", { class: "coach-dialog-section" }, [
         vue.createVNode($setup["BubbleDialogBox"], {
-          roleLabel: "Vince(艾斯)",
+          roleLabel: $setup.coachRoleLabel,
           avatarUrl: $setup.coachAvatarUrl,
-          badgeBackground: "linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)",
+          badgeBackground: $setup.coachBadgeBackground,
           text: $setup.currentWarmupTip,
           contentBackground: "rgba(255, 255, 255, 0.85)",
           showShadow: true
-        }, null, 8, ["text"])
+        }, null, 8, ["roleLabel", "avatarUrl", "badgeBackground", "text"])
       ]),
       vue.createCommentVNode(" 虚拟形象模拟缩略图（左下角） "),
       vue.createElementVNode("view", { class: "virtual-character-container" }, [
-        vue.createCommentVNode(" 左上角关闭按钮 "),
-        vue.createVNode($setup["CommonCloseButton"], {
-          class: "close-btn-position",
-          backgroundColor: "rgba(0, 0, 0, 0.3)",
-          opacity: 1,
-          onClose: $setup.closeVirtualCharacter
+        vue.createCommentVNode(" 左上角关闭按钮：直接使用静态资源 SVG，无背景容器 "),
+        vue.createElementVNode("image", {
+          class: "close-btn-svg",
+          src: _imports_1$6,
+          mode: "aspectFit",
+          onClick: $setup.closeVirtualCharacter
         }),
         vue.createCommentVNode(" 居中标题文字 "),
         vue.createElementVNode("text", { class: "virtual-title" }, "虚拟形象模拟"),
         vue.createCommentVNode(" 人物图片 "),
         vue.createElementVNode("image", {
           class: "virtual-character-image",
-          src: _imports_1$4,
+          src: _imports_2$2,
           mode: "aspectFit"
         })
       ]),

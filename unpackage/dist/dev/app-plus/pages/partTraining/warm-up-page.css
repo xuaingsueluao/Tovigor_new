@@ -49,80 +49,6 @@
 /* 边框颜色 */
 /* 字体颜色 */
 /* 字体大小 */
-.close-btn[data-v-4254237c] {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-          user-select: none;
-}
-.close-btn[data-v-4254237c]:active {
-  opacity: 0.7;
-}
-
-/* X 图标容器 */
-.close-icon[data-v-4254237c] {
-  position: relative;
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-/* X 的两条线 */
-.close-line[data-v-4254237c] {
-  position: absolute;
-  width: 0.5625rem;
-  height: 0.0625rem;
-  background-color: #FFFFFF;
-  border-radius: 0.03125rem;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-}
-
-/* 第一条线：从左上到右下（旋转 45 度） */
-.close-line-1[data-v-4254237c] {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-/* 第二条线：从右上到左下（旋转 -45 度） */
-.close-line-2[data-v-4254237c] {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-/*
- * 组件结构说明：
- * .close-btn (30rpx × 30rpx)          ← 圆形按钮背景，可点击区域
- *   └─ .close-icon (16rpx × 16rpx)    ← X 图标的容器，用于定位两条线
- *       ├─ .close-line-1 (18rpx × 2rpx)  ← 第一条斜线 (/)
- *       └─ .close-line-2 (18rpx × 2rpx)  ← 第二条斜线 (\)
- * 
- * 尺寸调整：
- * - 改 .close-btn 的 width/height → 改变点击区域和背景大小
- * - 改 .close-icon 的 width/height → 改变 X 图标大小
- * - 改 .close-line 的 width → 改变线条长度
- * - 改 .close-line 的 height → 改变线条粗细
- *   尺寸关系建议：按钮尺寸 (close-btn) : X容器 (close-icon) : 线长 (close-line width) ≈ 30 : 16 : 18
- *   如果你想改大按钮，同比例放大所有尺寸
- */
-/* 颜色变量 */
-/* 自定义颜色 */
-/* 柔和的橙色 */
-/* 浅湖绿/蓝绿 */
-/* 浅灰白背景 */
-/* 深灰色 */
-/* 牛奶白 */
-/* 95%透明 */
-/* 翠绿色 */
-/* 深蓝色 - AI教练卡片背景 */
-/* 中性蓝色 - 稍浅 */
-/* 背景颜色 */
-/* 边框颜色 */
-/* 字体颜色 */
-/* 字体大小 */
 /* 颜色变量 */
 /* 自定义颜色 */
 /* 柔和的橙色 */
@@ -343,12 +269,20 @@
   /* 关闭按钮的 absolute 定位会自动找到最近的非 static 祖先元素（这里就是自己的 absolute） */
 }
 
-/* 左上角关闭按钮定位 */
-.close-btn-position[data-v-cf52f72f] {
+/* 左上角关闭按钮（纯 SVG，无背景容器） */
+.close-btn-svg[data-v-cf52f72f] {
   position: absolute;
   top: 0.25rem;
   left: 0.25rem;
   z-index: 10;
+  width: 0.5625rem;
+  height: 0.5625rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.close-btn-svg[data-v-cf52f72f]:active {
+  opacity: 0.7;
 }
 
 /* 居中标题文字 */

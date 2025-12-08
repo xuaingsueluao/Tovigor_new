@@ -28,9 +28,9 @@
 		<!-- AI教练气泡对话框 -->
 		<view class="coach-dialog-section">
 			<BubbleDialogBox
-				roleLabel="Vince(艾斯)"
+				:roleLabel="coachRoleLabel"
 				:avatarUrl="coachAvatarUrl"
-				badgeBackground="linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)"
+				:badgeBackground="coachBadgeBackground"
 				:text="currentWarmupTip"
 				contentBackground="rgba(255, 255, 255, 0.85)"
 				:showShadow="true"
@@ -39,12 +39,12 @@
 		
 		<!-- 虚拟形象模拟缩略图（左下角） -->
 		<view class="virtual-character-container">
-			<!-- 左上角关闭按钮 -->
-			<CommonCloseButton 
-				class="close-btn-position"
-				backgroundColor="rgba(0, 0, 0, 0.3)"
-				:opacity="1"
-				@close="closeVirtualCharacter"
+			<!-- 左上角关闭按钮：直接使用静态资源 SVG，无背景容器 -->
+			<image 
+				class="close-btn-svg" 
+				src="/static/icons/general/btn_general_close.svg" 
+				mode="aspectFit"
+				@click="closeVirtualCharacter"
 			/>
 			
 			<!-- 居中标题文字 -->
@@ -69,9 +69,9 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
 import CommonBackButton from '@/components/ui-box/common-back-button.vue'
-import CommonCloseButton from '@/components/ui-box/common-close-button.vue'
 import StepBar from '@/components/ui-box/step-bar.vue'
 import BubbleDialogBox from '@/components/ui-box/bubble-dialog-box.vue'
+import { getSelectedCoach, getCoachDetailInfo } from '@/utils/coachManager.js'
 
 // ========== 测试开关：设置为 false 关闭测试按钮 ==========
 const SHOW_TEST_BUTTON = ref(true)
@@ -80,8 +80,11 @@ const SHOW_TEST_BUTTON = ref(true)
 // 每段进度的时间间隔（毫秒），可在此修改
 const STEP_INTERVAL_MS = 30000  // 默认 3 秒
 
-// AI教练头像
-const coachAvatarUrl = '/static/icons/partTrainingActivity/AI_coach_Vince.png'
+// AI教练信息（响应式，从本地存储读取）
+const selectedCoach = ref(null)
+const coachRoleLabel = computed(() => selectedCoach.value?.fullName || 'Vince 艾斯')
+const coachAvatarUrl = computed(() => selectedCoach.value?.avatar || '/static/icons/partTrainingActivity/AI_coach_Vince.png')
+const coachBadgeBackground = computed(() => selectedCoach.value?.badgeBackground || 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)')
 
 // 热身建议列表（6个阶段，每个阶段对应2段进度条）
 const warmupTips = [
@@ -105,6 +108,10 @@ const currentWarmupTip = computed(() => {
 
 // ========== 生命周期 ==========
 onMounted(() => {
+	// 读取选中的教练信息
+	selectedCoach.value = getSelectedCoach()
+	console.log('当前选中的教练:', selectedCoach.value)
+	
 	startProgressTimer()
 })
 
@@ -257,12 +264,20 @@ const closeVirtualCharacter = () => {
 	/* 关闭按钮的 absolute 定位会自动找到最近的非 static 祖先元素（这里就是自己的 absolute） */
 }
 
-/* 左上角关闭按钮定位 */
-.close-btn-position {
+/* 左上角关闭按钮（纯 SVG，无背景容器） */
+.close-btn-svg {
 	position: absolute;
 	top: 8rpx;
 	left: 8rpx;
 	z-index: 10;
+	width: 18rpx;
+	height: 18rpx;
+	cursor: pointer;
+	user-select: none;
+}
+
+.close-btn-svg:active {
+	opacity: 0.7;
 }
 
 /* 居中标题文字 */
