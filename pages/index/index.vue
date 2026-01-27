@@ -12,7 +12,7 @@
 				<text class="title-main">HI,Tovigor</text>
 				<!-- <image class="title-icon" src="/static/icons/homeActivity/trimming.png" mode="aspectFill"></image> -->
 			</view>
-			<text class="title-sub">欢迎来到Tovigor的健身世界，活力一触即发！</text>
+			<text class="title-sub">1234Tovigor的健身世界，活力一触即发！</text>
 		</view>
 
 		<!-- 功能卡片区域 -->

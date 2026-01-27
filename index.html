@@ -9,6 +9,26 @@
         '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
         (coverSupport ? ', viewport-fit=cover' : '') + '" />')
     </script>
+    <!-- 解决 H5 调试时 passive event listener 警告 -->
+    <script>
+      (function() {
+        if (typeof EventTarget !== 'undefined') {
+          var origAddEventListener = EventTarget.prototype.addEventListener;
+          var passiveEvents = ['touchstart', 'touchmove', 'wheel', 'mousewheel'];
+          EventTarget.prototype.addEventListener = function(type, listener, options) {
+            var newOptions = options;
+            if (passiveEvents.indexOf(type) !== -1) {
+              if (typeof options === 'boolean') {
+                newOptions = { capture: options, passive: false };
+              } else if (typeof options === 'object' || options === undefined) {
+                newOptions = Object.assign({}, options || {}, { passive: false });
+              }
+            }
+            return origAddEventListener.call(this, type, listener, newOptions);
+          };
+        }
+      })();
+    </script>
     <title></title>
     <!--preload-links-->
     <!--app-context-->

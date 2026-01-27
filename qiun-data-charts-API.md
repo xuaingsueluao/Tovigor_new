@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 # qiun-data-charts 图表组件 API 文档
 
 > **版本**: 2.5.0-20230101  

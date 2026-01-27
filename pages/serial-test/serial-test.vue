@@ -52,8 +52,8 @@
       </view>
       <view class="quick-commands">
         <text class="label">快捷命令:</text>
-        <button @click="handleSendQuick('AA5501BB')" class="btn btn-small">测试1</button>
-        <button @click="handleSendQuick('AA5502BB')" class="btn btn-small">测试2</button>
+        <button @click="handleSendQuick('73B4000A01002AF365')" class="btn btn-small">恒10</button>
+        <button @click="handleSendQuick('73B400050000E1BB65')" class="btn btn-small">力量关闭</button>
         <button @click="handleSendQuick('AA5503BB')" class="btn btn-small">测试3</button>
       </view>
     </view>
@@ -373,7 +373,6 @@ const handleSendCommand = () => {
 
 const handleSendQuick = (data) => {
   sendData.value = data
-  handleSendCommand()
 }
 
 const clearReceived = () => {
