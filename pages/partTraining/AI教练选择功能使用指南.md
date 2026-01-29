@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 # AI 教练选择功能使用指南
 
 ## 功能概述

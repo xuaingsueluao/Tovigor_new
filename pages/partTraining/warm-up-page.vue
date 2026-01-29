@@ -5,12 +5,47 @@
  -->
 <template>
 	<view class="warm-up-page">
-		<!-- 全屏背景图（占位图，后续替换为视频） -->
+		<!-- 全屏背景图（占位图，后续替换为视频）- 点击显示控制面板 -->
 		<image 
 			class="background-image" 
 			src="/static/icons/partTrainingActivity/startTraining/trainingActivity_placeHolder.webp" 
 			mode="aspectFill"
+			@click="showControlPanel"
 		/>
+		
+		<!-- 控制面板遮罩层 -->
+		<view 
+			v-if="isControlPanelVisible" 
+			class="control-panel-overlay"
+			@click="hideControlPanel"
+		>
+			<!-- 按钮组容器 - 阻止点击冒泡 -->
+			<view class="control-buttons" @click.stop>
+				<!-- 继续播放按钮 -->
+				<view class="control-btn continue-btn" @click="handleContinue">
+					<image 
+						class="control-btn-icon" 
+						src="/static/icons/homeActivity/btn_playing.svg" 
+						mode="aspectFit"
+					/>
+				</view>
+				
+				<!-- 下一训练环节按钮 -->
+				<view class="control-btn next-btn" @click="handleNextStep">
+					<image 
+						class="control-btn-icon" 
+						src="/static/icons/general/btn_next_step.svg" 
+						mode="aspectFit"
+					/>
+					<text class="control-btn-text">下一环节</text>
+				</view>
+			</view>
+			
+			<!-- 退出训练按钮（底部居中） -->
+			<view class="exit-btn" @click.stop="handleExitTraining">
+				<text class="exit-btn-text">退出训练</text>
+			</view>
+		</view>
 		
 		<!-- 返回按钮（左上角浮层） -->
 		<CommonBackButton class="back-btn-position" />
@@ -158,7 +193,7 @@ const resetProgress = () => {
 // 跳转到下一页：调整器械
 const navigateToNextPage = () => {
 	uni.navigateTo({
-		url: '/pages/partTraining/adjust-equipment'  // TODO: 创建此页面
+		url: '/pages/partTraining/adjust-equipment'  
 	})
 }
 
@@ -175,6 +210,42 @@ const closeVirtualCharacter = () => {
 	uni.showToast({
 		title: '功能开发中',
 		icon: 'none'
+	})
+}
+
+// ========== 控制面板逻辑 ==========
+const isControlPanelVisible = ref(false)
+
+// 显示控制面板（暂停进度）
+const showControlPanel = () => {
+	isControlPanelVisible.value = true
+	clearProgressTimer()  // 暂停进度
+}
+
+// 隐藏控制面板（继续进度）
+const hideControlPanel = () => {
+	isControlPanelVisible.value = false
+	startProgressTimer()  // 恢复进度
+}
+
+// 继续播放
+const handleContinue = () => {
+	hideControlPanel()
+}
+
+// 下一训练环节
+const handleNextStep = () => {
+	isControlPanelVisible.value = false
+	clearProgressTimer()
+	navigateToNextPage()
+}
+
+// 退出训练
+const handleExitTraining = () => {
+	isControlPanelVisible.value = false
+	clearProgressTimer()
+	uni.navigateBack({
+		delta: 2  // 返回两级（跳过课程详情页，回到课程列表）
 	})
 }
 </script>
@@ -295,21 +366,19 @@ const closeVirtualCharacter = () => {
 	height: 140rpx;
 }
 
-/* ========== 测试按钮（右侧浮层） ========== */
+/* ========== 测试按钮（进度条下方） ========== */
 .test-btn {
 	position: absolute;
-	top: 50%;
+	top: 180rpx;
 	right: 30rpx;
 	z-index: 200;
-	width: 120rpx;
-	height: 120rpx;
-	border-radius: 50%;
+	padding: 16rpx 28rpx;
+	border-radius: 30rpx;
 	background: linear-gradient(135deg, #FF6B6B, #FF8E53);
 	box-shadow: 0 8rpx 24rpx rgba(255, 107, 107, 0.4);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: all 0.3s;
 }
 
 .test-btn:active {
@@ -322,5 +391,97 @@ const closeVirtualCharacter = () => {
 	color: #FFFFFF;
 	text-align: center;
 	line-height: 1.3;
+}
+
+/* ========== 控制面板遮罩层 ========== */
+.control-panel-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 500;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 按钮组容器 - 水平排列，继续按钮居中 */
+.control-buttons {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+/* 通用控制按钮样式 */
+.control-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 继续播放按钮（居中，大图标） */
+.continue-btn {
+	position: relative;
+}
+
+.continue-btn .control-btn-icon {
+	width: 160rpx;
+	height: 160rpx;
+}
+
+/* 下一环节按钮（右侧，小图标） */
+.next-btn {
+	position: absolute;
+	right: 80rpx;
+	/* continue图标160rpx，中心80rpx；next图标90rpx，中心45rpx */
+	/* 要让图标中心对齐：top = 80 - 45 = 35rpx */
+	top: 35rpx;
+	opacity: 0.9;
+}
+
+.next-btn .control-btn-icon {
+	width: 90rpx;
+	height: 90rpx;
+}
+
+/* 按钮文字 */
+.control-btn-text {
+	margin-top: 12rpx;
+	font-size: 22rpx;
+	color: #FFFFFF;
+	text-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.5);
+}
+
+.next-btn:active {
+	opacity: 0.7;
+}
+
+/* 退出训练按钮（底部） */
+.exit-btn {
+	position: absolute;
+	bottom: 200rpx;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 24rpx 60rpx;
+	background-color: rgba(80, 80, 80, 0.85);
+	border: none;
+	border-radius: 50rpx;
+}
+
+.exit-btn:active {
+	background-color: rgba(60, 60, 60, 0.9);
+}
+
+.exit-btn-text {
+	font-size: 30rpx;
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: 500;
 }
 </style>

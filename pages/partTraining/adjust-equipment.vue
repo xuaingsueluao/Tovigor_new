@@ -277,12 +277,12 @@ const closeVideo = () => {
 /* 播放按钮：右上角 */
 .play-corner {
   position: absolute;
-  right: 14rpx;
-  top: 14rpx;
+  right: 6rpx;
+  top: 6rpx;
   width: 52rpx;
   height: 52rpx;
   border-radius: 26rpx;
-  background: rgba(0, 0, 0, 0.35);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,7 +322,7 @@ const closeVideo = () => {
   width: 52rpx;
   height: 52rpx;
   border-radius: 26rpx;
-  background: #111;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -355,7 +355,7 @@ const closeVideo = () => {
   width: 72rpx;
   height: 72rpx;
   border-radius: 36rpx;
-  background: rgba(0, 0, 0, 0.35);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
