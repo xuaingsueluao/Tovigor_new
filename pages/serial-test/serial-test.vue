@@ -1,3 +1,15 @@
+<!--
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║  ⚠️ TODO: 数据帧解析 (重要!)                                               ║
+  ║                                                                           ║
+  ║  当前页面仅做串口通信测试，数据接收采用简单轮询方式。                          ║
+  ║  正式业务逻辑中必须实现协议帧解析：                                          ║
+  ║    - 帧头: 0x73                                                           ║
+  ║    - 帧尾: 0x65                                                           ║
+  ║    - 需要处理: 拆包、粘包、校验                                             ║
+  ║                                                                           ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+-->
 <template>
   <view class="container">
     <view class="header">
@@ -264,10 +276,11 @@ const handleClosePort = () => {
 // 读取定时器
 let readTimer = null
 
+// TODO: ⚠️ 正式业务需实现帧解析！当前简单轮询会导致拆包/粘包，需根据帧头0x73和帧尾0x65进行协议解析
 const startReading = () => {
   stopReading() // 先停止之前的定时器
   
-  // 每 200ms 尝试读取一次数据
+  // 每 250ms 尝试读取一次数据（需大于 readSerial 的 timeout）
   readTimer = setInterval(() => {
     if (!isConnected.value || currentPortId === 0) {
       stopReading()
@@ -278,7 +291,7 @@ const startReading = () => {
       portId: currentPortId,
       length: 1024,
       format: 'hex',
-      timeout: 100,
+      timeout: 150,
       success: (res) => {
         if (res.bytesRead > 0) {
           console.log('接收到数据:', res.data)
@@ -301,7 +314,7 @@ const startReading = () => {
         }
       }
     })
-  }, 200)
+  }, 250)
 }
 
 const stopReading = () => {
