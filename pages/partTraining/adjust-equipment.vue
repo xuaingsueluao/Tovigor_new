@@ -93,7 +93,7 @@
 
     <!-- 底部按钮托盘 -->
     <view class="bottom-bar">
-      <button class="start-btn">开始训练</button>
+      <button class="start-btn" @tap="startTraining">开始训练</button>
     </view>
 
     <!-- 视频弹窗 -->
@@ -130,7 +130,7 @@ const params = ref({
 /** 资源（建议统一用 /static/...，跨端最稳） */
 const icons = {
   play: '/static/icons/partTrainingActivity/startTraining/btn-vedio-play.svg',
-  hand: '/static/icons/partTrainingActivity/startTraining/icon-hand.png',
+  hand: '/static/icons/partTrainingActivity/startTraining/grip.jpg',
 }
 
 /** “握法展示 / 器材准备”标题行 */
@@ -193,6 +193,13 @@ const playVideo = (url) => {
 const closeVideo = () => {
   showVideoModal.value = false
   videoSrc.value = '' // 关闭时断流，避免后台继续播放
+}
+
+/** 开始训练 - 跳转到正式训练页 */
+const startTraining = () => {
+  uni.navigateTo({
+    url: '/pages/partTraining/formal-training'
+  })
 }
 </script>
 
@@ -292,6 +299,7 @@ const closeVideo = () => {
 /* ② 标题行 */
 .section-row {
   margin-top: 18rpx;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -306,13 +314,15 @@ const closeVideo = () => {
   display: flex;
   align-items: center;
   gap: 10rpx;
+  z-index: 1;
 }
-.chip-icon { width: 28rpx; height: 28rpx; }
-.chip-text { color: #fff; font-size: 24rpx; font-weight: 600; }
+.chip-icon { width: 28rpx; height: 28rpx; border-radius: 6rpx; }
+.chip-text { color: #ffffff; font-size: 24rpx; font-weight: 600; }
 
 .section-title {
-  flex: 1;
-  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 30rpx;
   font-weight: 700;
   color: #222;
@@ -326,6 +336,7 @@ const closeVideo = () => {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 .play-round image { width: 28rpx; height: 28rpx; }
 

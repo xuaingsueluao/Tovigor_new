@@ -61,6 +61,24 @@
 			}
 		},
 		{
+			"path": "pages/partTraining/formal-training",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true,
+				"bounce": "none"
+			}
+		},
+		{
+			"path": "pages/partTraining/cool-down-page",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true,
+				"bounce": "none"
+			}
+		},
+		{
 			"path": "pages/smartAssess/first-skip",
 			"style": {
 				"navigationBarTitleText": "智能评估",
